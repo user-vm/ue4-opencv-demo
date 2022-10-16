@@ -1,0 +1,18 @@
+{
+ "options": [
+  [
+   "libjpeg:fPIC",
+   "True"
+  ],
+  [
+   "libjpeg:shared",
+   "False"
+  ]
+ ],
+ "root": {
+  "name": null,
+  "version": null,
+  "user": null,
+  "channel": null
+ }
+}

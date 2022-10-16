@@ -1,0 +1,165 @@
+{
+  "deps_env_info": {
+    "CONAN_CMAKE_PROGRAM": "/home/v/.conan/data/android-ndk/r21e/_/_/package/4db1be536558d833e52e862fd84d64d75c2b3656/cmake-wrapper",
+    "PATH": [
+      "/home/v/.conan/data/android-ndk/r21e/_/_/package/4db1be536558d833e52e862fd84d64d75c2b3656",
+      "/home/v/.conan/data/android-ndk/r21e/_/_/package/4db1be536558d833e52e862fd84d64d75c2b3656/."
+    ],
+    "ANDROID_NDK_ROOT": "/home/v/.conan/data/android-ndk/r21e/_/_/package/4db1be536558d833e52e862fd84d64d75c2b3656",
+    "ANDROID_NDK_HOME": "/home/v/.conan/data/android-ndk/r21e/_/_/package/4db1be536558d833e52e862fd84d64d75c2b3656",
+    "CONAN_CMAKE_SYSTEM_PROCESSOR": "aarch64",
+    "NDK_ROOT": "/home/v/.conan/data/android-ndk/r21e/_/_/package/4db1be536558d833e52e862fd84d64d75c2b3656/toolchains/llvm/prebuilt/linux-x86_64",
+    "CHOST": "aarch64-linux-android",
+    "CONAN_CMAKE_FIND_ROOT_PATH": "/home/v/.conan/data/android-ndk/r21e/_/_/package/4db1be536558d833e52e862fd84d64d75c2b3656/toolchains/llvm/prebuilt/linux-x86_64/sysroot",
+    "SYSROOT": "/home/v/.conan/data/android-ndk/r21e/_/_/package/4db1be536558d833e52e862fd84d64d75c2b3656/toolchains/llvm/prebuilt/linux-x86_64/sysroot",
+    "ANDROID_NATIVE_API_LEVEL": "21",
+    "CONAN_CMAKE_TOOLCHAIN_FILE": "/home/v/.conan/data/android-ndk/r21e/_/_/package/4db1be536558d833e52e862fd84d64d75c2b3656/build/cmake/android.toolchain.cmake",
+    "CC": "/home/v/.conan/data/android-ndk/r21e/_/_/package/4db1be536558d833e52e862fd84d64d75c2b3656/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android21-clang",
+    "CXX": "/home/v/.conan/data/android-ndk/r21e/_/_/package/4db1be536558d833e52e862fd84d64d75c2b3656/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android21-clang++",
+    "AR": "/home/v/.conan/data/android-ndk/r21e/_/_/package/4db1be536558d833e52e862fd84d64d75c2b3656/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android-ar",
+    "AS": "/home/v/.conan/data/android-ndk/r21e/_/_/package/4db1be536558d833e52e862fd84d64d75c2b3656/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android-as",
+    "RANLIB": "/home/v/.conan/data/android-ndk/r21e/_/_/package/4db1be536558d833e52e862fd84d64d75c2b3656/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android-ranlib",
+    "STRIP": "/home/v/.conan/data/android-ndk/r21e/_/_/package/4db1be536558d833e52e862fd84d64d75c2b3656/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android-strip",
+    "ADDR2LINE": "/home/v/.conan/data/android-ndk/r21e/_/_/package/4db1be536558d833e52e862fd84d64d75c2b3656/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android-addr2line",
+    "NM": "/home/v/.conan/data/android-ndk/r21e/_/_/package/4db1be536558d833e52e862fd84d64d75c2b3656/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android-nm",
+    "OBJCOPY": "/home/v/.conan/data/android-ndk/r21e/_/_/package/4db1be536558d833e52e862fd84d64d75c2b3656/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android-objcopy",
+    "OBJDUMP": "/home/v/.conan/data/android-ndk/r21e/_/_/package/4db1be536558d833e52e862fd84d64d75c2b3656/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android-objdump",
+    "READELF": "/home/v/.conan/data/android-ndk/r21e/_/_/package/4db1be536558d833e52e862fd84d64d75c2b3656/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android-readelf",
+    "ELFEDIT": "/home/v/.conan/data/android-ndk/r21e/_/_/package/4db1be536558d833e52e862fd84d64d75c2b3656/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android-elfedit",
+    "LD": "/home/v/.conan/data/android-ndk/r21e/_/_/package/4db1be536558d833e52e862fd84d64d75c2b3656/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android-ld",
+    "ANDROID_PLATFORM": "android-21",
+    "ANDROID_TOOLCHAIN": "clang",
+    "ANDROID_ABI": "arm64-v8a",
+    "ANDROID_STL": "c++_shared",
+    "CMAKE_FIND_ROOT_PATH_MODE_PROGRAM": "BOTH",
+    "CMAKE_FIND_ROOT_PATH_MODE_LIBRARY": "BOTH",
+    "CMAKE_FIND_ROOT_PATH_MODE_INCLUDE": "BOTH",
+    "CMAKE_FIND_ROOT_PATH_MODE_PACKAGE": "BOTH",
+    "DYLD_LIBRARY_PATH": [],
+    "DYLD_FRAMEWORK_PATH": [],
+    "LD_LIBRARY_PATH": []
+  },
+  "deps_user_info": {
+    "opencv-ue4": {},
+    "libcxx": {},
+    "ue4util": {}
+  },
+  "dependencies": [
+    {
+      "version": "3.3.0",
+      "description": "OpenCV custom build for UE4",
+      "rootpath": "/home/v/.conan/data/opencv-ue4/3.3.0/adamrehn/4.27/package/10b3a78fbb63bce73ce064b23f74bee43c021475",
+      "sysroot": "",
+      "include_paths": [
+        "/home/v/.conan/data/opencv-ue4/3.3.0/adamrehn/4.27/package/10b3a78fbb63bce73ce064b23f74bee43c021475/sdk/native/jni/include"
+      ],
+      "lib_paths": [
+        "/home/v/.conan/data/opencv-ue4/3.3.0/adamrehn/4.27/package/10b3a78fbb63bce73ce064b23f74bee43c021475/"
+      ],
+      "bin_paths": [],
+      "build_paths": [
+        "/home/v/.conan/data/opencv-ue4/3.3.0/adamrehn/4.27/package/10b3a78fbb63bce73ce064b23f74bee43c021475/"
+      ],
+      "res_paths": [],
+      "libs": [
+        "opencv_aruco",
+        "opencv_calib3d",
+        "opencv_core",
+        "opencv_features2d",
+        "opencv_flann",
+        "opencv_highgui",
+        "opencv_imgcodecs",
+        "opencv_imgproc",
+        "opencv_videoio",
+        "cpufeatures",
+        "libjpeg",
+        "libpng"
+      ],
+      "system_libs": [],
+      "defines": [],
+      "cflags": [],
+      "cxxflags": [],
+      "sharedlinkflags": [],
+      "exelinkflags": [],
+      "frameworks": [],
+      "framework_paths": [],
+      "names": {},
+      "filenames": {},
+      "build_modules": {},
+      "build_modules_paths": {},
+      "cppflags": [],
+      "name": "opencv-ue4"
+    },
+    {
+      "version": "ue4",
+      "description": null,
+      "rootpath": "/home/v/.conan/data/libcxx/ue4/adamrehn/profile/package/5ab84d6acfe1f23c4fae0ab88f26e3a396351ac9",
+      "sysroot": "",
+      "include_paths": [],
+      "lib_paths": [],
+      "bin_paths": [],
+      "build_paths": [
+        "/home/v/.conan/data/libcxx/ue4/adamrehn/profile/package/5ab84d6acfe1f23c4fae0ab88f26e3a396351ac9/"
+      ],
+      "res_paths": [],
+      "libs": [],
+      "system_libs": [],
+      "defines": [],
+      "cflags": [],
+      "cxxflags": [],
+      "sharedlinkflags": [],
+      "exelinkflags": [],
+      "frameworks": [],
+      "framework_paths": [],
+      "names": {},
+      "filenames": {},
+      "build_modules": {},
+      "build_modules_paths": {},
+      "cppflags": [],
+      "name": "libcxx"
+    },
+    {
+      "version": "ue4",
+      "description": null,
+      "rootpath": "/home/v/.conan/data/ue4util/ue4/adamrehn/profile/package/5ab84d6acfe1f23c4fae0ab88f26e3a396351ac9",
+      "sysroot": "",
+      "include_paths": [],
+      "lib_paths": [],
+      "bin_paths": [],
+      "build_paths": [
+        "/home/v/.conan/data/ue4util/ue4/adamrehn/profile/package/5ab84d6acfe1f23c4fae0ab88f26e3a396351ac9/"
+      ],
+      "res_paths": [],
+      "libs": [],
+      "system_libs": [],
+      "defines": [],
+      "cflags": [],
+      "cxxflags": [],
+      "sharedlinkflags": [],
+      "exelinkflags": [],
+      "frameworks": [],
+      "framework_paths": [],
+      "names": {},
+      "filenames": {},
+      "build_modules": {},
+      "build_modules_paths": {},
+      "cppflags": [],
+      "name": "ue4util"
+    }
+  ],
+  "settings": {
+    "arch": "armv8",
+    "build_type": "Debug",
+    "compiler": "clang",
+    "compiler.libcxx": "libc++",
+    "compiler.version": "11",
+    "os": "Android",
+    "os.api_level": "21"
+  },
+  "options": {
+    "opencv-ue4": {}
+  },
+  "user_info_build": {
+    "android-ndk": {}
+  }
+}

@@ -1,3 +1,11 @@
+This is a modified version of [ue4-opencv-demo](https://github.com/adamrehn/ue4-opencv-demo), implementing ArUco marker tracking in Unreal Engine with OpenCV. It uses OpenCV's VideoCapture, because Unreal Engine webcam capture through IMediaCaptureSupport has not been implemented yet.
+
+Tested only on Ubuntu. Running on Windows would require changing the VideoCapture API from CAP\_V4L2 to CAP\_DSHOW in CameraReader.cpp (or something else, depending on the API needed - see [here](https://docs.opencv.org/3.4/d4/d15/group__videoio__flags__base.html)). Also, the build flag "-DWITH\_DSHOW=OFF" should be changed to "-DWITH\_DSHOW=ON" for this purpose. Alternatively, Windows webcam capture can be done through Unreal Engine, with some modifications to the CameraReader blueprint (as can be seen [here](https://www.youtube.com/watch?v=YOidIl2kTD0&list=PLUH2VVdSrWDAanjmSOumd5xXVq_jUeAGI)).
+
+Any Android-specific code should be ignored (it will be removed in the future), as OpenCV cannot access Android cameras through VideoCapture.
+
+Uses Unreal Engine 4.27. Original README.md follows.
+
 # OpenCV Integration Demo for UE4 with conan-ue4cli
 
 This repository contains demo code for using the Conan packages from the [conan-ue4cli](https://github.com/adamrehn/conan-ue4cli) repository to build a custom OpenCV package that links against the UE4-bundled versions of zlib and libpng, and then consume the custom-built OpenCV package in a simple UE4 project.

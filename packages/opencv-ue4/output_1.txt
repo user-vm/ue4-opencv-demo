@@ -1,0 +1,491 @@
+Exporting package recipe
+opencv-ue4/3.3.0@adamrehn/4.27: The stored package has not changed
+opencv-ue4/3.3.0@adamrehn/4.27: Exported revision: 8d431b0422c3ba35bd3fd1398524b6e1
+Configuration (profile_host):
+[settings]
+arch=armv8
+build_type=Debug
+compiler=clang
+compiler.libcxx=libc++
+compiler.version=11
+os=Android
+os.api_level=21
+[options]
+[build_requires]
+*: android-ndk/r21e
+[env]
+CONAN_CMAKE_TOOLCHAIN_FILE=/home/v/2022/UnrealProjects/ue4-opencv-demo/packages/opencv-ue4/android_toolchain.cmake
+Configuration (profile_build):
+[settings]
+arch=x86_64
+arch_build=x86_64
+build_type=Debug
+compiler=clang
+compiler.libcxx=libc++
+compiler.version=11
+os=Linux
+os_build=Linux
+[options]
+[build_requires]
+*: toolchain-wrapper/ue4@adamrehn/4.27
+[env]
+UNREAL_ENGINE_VERSION=4.27
+libjpeg/9d: Forced build from source
+ue4lib/ue4@adamrehn/profile: Forced build from source
+UElibPNG/ue4@adamrehn/4.27: Forced build from source
+zlib/ue4@adamrehn/4.27: Forced build from source
+opencv-ue4/3.3.0@adamrehn/4.27: Forced build from source
+Installing package: opencv-ue4/3.3.0@adamrehn/4.27
+Requirements
+    UElibPNG/ue4@adamrehn/4.27 from local cache - Cache
+    libcxx/ue4@adamrehn/profile from local cache - Cache
+    libjpeg/9d from 'conancenter' - Cache
+    opencv-ue4/3.3.0@adamrehn/4.27 from local cache - Cache
+    ue4lib/ue4@adamrehn/profile from local cache - Cache
+    ue4util/ue4@adamrehn/profile from local cache - Cache
+    zlib/ue4@adamrehn/4.27 from local cache - Cache
+Python requires
+    ue4lib/ue4@adamrehn/profile
+Packages
+    UElibPNG/ue4@adamrehn/4.27:4bee7863161e4817bcb525156305eee4e44ce246 - Build
+    libcxx/ue4@adamrehn/profile:5ab84d6acfe1f23c4fae0ab88f26e3a396351ac9 - Cache
+    libjpeg/9d:c2498eaf18750fcd4767c5573c0a4e8b21f5728d - Build
+    opencv-ue4/3.3.0@adamrehn/4.27:391b9d0a535aaed28448644a513e721eab35b6b0 - Build
+    ue4lib/ue4@adamrehn/profile:5ab84d6acfe1f23c4fae0ab88f26e3a396351ac9 - Build
+    ue4util/ue4@adamrehn/profile:5ab84d6acfe1f23c4fae0ab88f26e3a396351ac9 - Cache
+    zlib/ue4@adamrehn/4.27:0db9651cd05022a4a40617522b024bc69a6aeaf1 - Build
+Build requirements
+    android-ndk/r21e from 'conancenter' - Cache
+Build requirements packages
+    android-ndk/r21e:4db1be536558d833e52e862fd84d64d75c2b3656 - Cache
+
+Cross-build from 'Linux:x86_64' to 'Android:armv8'
+Installing (downloading, building) binaries...
+android-ndk/r21e: Already installed!
+android-ndk/r21e: Creating CONAN_CMAKE_PROGRAM environment variable: /home/v/.conan/data/android-ndk/r21e/_/_/package/4db1be536558d833e52e862fd84d64d75c2b3656/cmake-wrapper
+android-ndk/r21e: Creating CC environment variable: /home/v/.conan/data/android-ndk/r21e/_/_/package/4db1be536558d833e52e862fd84d64d75c2b3656/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android21-clang
+android-ndk/r21e: Creating CXX environment variable: /home/v/.conan/data/android-ndk/r21e/_/_/package/4db1be536558d833e52e862fd84d64d75c2b3656/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android21-clang++
+android-ndk/r21e: Creating AR environment variable: /home/v/.conan/data/android-ndk/r21e/_/_/package/4db1be536558d833e52e862fd84d64d75c2b3656/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android-ar
+android-ndk/r21e: Creating AS environment variable: /home/v/.conan/data/android-ndk/r21e/_/_/package/4db1be536558d833e52e862fd84d64d75c2b3656/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android-as
+android-ndk/r21e: Creating RANLIB environment variable: /home/v/.conan/data/android-ndk/r21e/_/_/package/4db1be536558d833e52e862fd84d64d75c2b3656/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android-ranlib
+android-ndk/r21e: Creating STRIP environment variable: /home/v/.conan/data/android-ndk/r21e/_/_/package/4db1be536558d833e52e862fd84d64d75c2b3656/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android-strip
+android-ndk/r21e: Creating ADDR2LINE environment variable: /home/v/.conan/data/android-ndk/r21e/_/_/package/4db1be536558d833e52e862fd84d64d75c2b3656/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android-addr2line
+android-ndk/r21e: Creating NM environment variable: /home/v/.conan/data/android-ndk/r21e/_/_/package/4db1be536558d833e52e862fd84d64d75c2b3656/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android-nm
+android-ndk/r21e: Creating OBJCOPY environment variable: /home/v/.conan/data/android-ndk/r21e/_/_/package/4db1be536558d833e52e862fd84d64d75c2b3656/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android-objcopy
+android-ndk/r21e: Creating OBJDUMP environment variable: /home/v/.conan/data/android-ndk/r21e/_/_/package/4db1be536558d833e52e862fd84d64d75c2b3656/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android-objdump
+android-ndk/r21e: Creating READELF environment variable: /home/v/.conan/data/android-ndk/r21e/_/_/package/4db1be536558d833e52e862fd84d64d75c2b3656/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android-readelf
+android-ndk/r21e: Creating ELFEDIT environment variable: /home/v/.conan/data/android-ndk/r21e/_/_/package/4db1be536558d833e52e862fd84d64d75c2b3656/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android-elfedit
+android-ndk/r21e: Creating LD environment variable: /home/v/.conan/data/android-ndk/r21e/_/_/package/4db1be536558d833e52e862fd84d64d75c2b3656/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android-ld
+android-ndk/r21e: Creating CC environment variable: /home/v/.conan/data/android-ndk/r21e/_/_/package/4db1be536558d833e52e862fd84d64d75c2b3656/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android21-clang
+android-ndk/r21e: Creating CXX environment variable: /home/v/.conan/data/android-ndk/r21e/_/_/package/4db1be536558d833e52e862fd84d64d75c2b3656/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android21-clang++
+android-ndk/r21e: Creating AR environment variable: /home/v/.conan/data/android-ndk/r21e/_/_/package/4db1be536558d833e52e862fd84d64d75c2b3656/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android-ar
+android-ndk/r21e: Creating AS environment variable: /home/v/.conan/data/android-ndk/r21e/_/_/package/4db1be536558d833e52e862fd84d64d75c2b3656/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android-as
+android-ndk/r21e: Creating RANLIB environment variable: /home/v/.conan/data/android-ndk/r21e/_/_/package/4db1be536558d833e52e862fd84d64d75c2b3656/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android-ranlib
+android-ndk/r21e: Creating STRIP environment variable: /home/v/.conan/data/android-ndk/r21e/_/_/package/4db1be536558d833e52e862fd84d64d75c2b3656/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android-strip
+android-ndk/r21e: Creating ADDR2LINE environment variable: /home/v/.conan/data/android-ndk/r21e/_/_/package/4db1be536558d833e52e862fd84d64d75c2b3656/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android-addr2line
+android-ndk/r21e: Creating NM environment variable: /home/v/.conan/data/android-ndk/r21e/_/_/package/4db1be536558d833e52e862fd84d64d75c2b3656/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android-nm
+android-ndk/r21e: Creating OBJCOPY environment variable: /home/v/.conan/data/android-ndk/r21e/_/_/package/4db1be536558d833e52e862fd84d64d75c2b3656/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android-objcopy
+android-ndk/r21e: Creating OBJDUMP environment variable: /home/v/.conan/data/android-ndk/r21e/_/_/package/4db1be536558d833e52e862fd84d64d75c2b3656/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android-objdump
+android-ndk/r21e: Creating READELF environment variable: /home/v/.conan/data/android-ndk/r21e/_/_/package/4db1be536558d833e52e862fd84d64d75c2b3656/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android-readelf
+android-ndk/r21e: Creating ELFEDIT environment variable: /home/v/.conan/data/android-ndk/r21e/_/_/package/4db1be536558d833e52e862fd84d64d75c2b3656/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android-elfedit
+android-ndk/r21e: Creating LD environment variable: /home/v/.conan/data/android-ndk/r21e/_/_/package/4db1be536558d833e52e862fd84d64d75c2b3656/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android-ld
+android-ndk/r21e: Creating CONAN_CMAKE_PROGRAM environment variable: /home/v/.conan/data/android-ndk/r21e/_/_/package/4db1be536558d833e52e862fd84d64d75c2b3656/cmake-wrapper
+android-ndk/r21e: Creating CC environment variable: /home/v/.conan/data/android-ndk/r21e/_/_/package/4db1be536558d833e52e862fd84d64d75c2b3656/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android21-clang
+android-ndk/r21e: Creating CXX environment variable: /home/v/.conan/data/android-ndk/r21e/_/_/package/4db1be536558d833e52e862fd84d64d75c2b3656/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android21-clang++
+android-ndk/r21e: Creating AR environment variable: /home/v/.conan/data/android-ndk/r21e/_/_/package/4db1be536558d833e52e862fd84d64d75c2b3656/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android-ar
+android-ndk/r21e: Creating AS environment variable: /home/v/.conan/data/android-ndk/r21e/_/_/package/4db1be536558d833e52e862fd84d64d75c2b3656/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android-as
+android-ndk/r21e: Creating RANLIB environment variable: /home/v/.conan/data/android-ndk/r21e/_/_/package/4db1be536558d833e52e862fd84d64d75c2b3656/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android-ranlib
+android-ndk/r21e: Creating STRIP environment variable: /home/v/.conan/data/android-ndk/r21e/_/_/package/4db1be536558d833e52e862fd84d64d75c2b3656/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android-strip
+android-ndk/r21e: Creating ADDR2LINE environment variable: /home/v/.conan/data/android-ndk/r21e/_/_/package/4db1be536558d833e52e862fd84d64d75c2b3656/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android-addr2line
+android-ndk/r21e: Creating NM environment variable: /home/v/.conan/data/android-ndk/r21e/_/_/package/4db1be536558d833e52e862fd84d64d75c2b3656/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android-nm
+android-ndk/r21e: Creating OBJCOPY environment variable: /home/v/.conan/data/android-ndk/r21e/_/_/package/4db1be536558d833e52e862fd84d64d75c2b3656/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android-objcopy
+android-ndk/r21e: Creating OBJDUMP environment variable: /home/v/.conan/data/android-ndk/r21e/_/_/package/4db1be536558d833e52e862fd84d64d75c2b3656/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android-objdump
+android-ndk/r21e: Creating READELF environment variable: /home/v/.conan/data/android-ndk/r21e/_/_/package/4db1be536558d833e52e862fd84d64d75c2b3656/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android-readelf
+android-ndk/r21e: Creating ELFEDIT environment variable: /home/v/.conan/data/android-ndk/r21e/_/_/package/4db1be536558d833e52e862fd84d64d75c2b3656/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android-elfedit
+android-ndk/r21e: Creating LD environment variable: /home/v/.conan/data/android-ndk/r21e/_/_/package/4db1be536558d833e52e862fd84d64d75c2b3656/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android-ld
+android-ndk/r21e: Creating CC environment variable: /home/v/.conan/data/android-ndk/r21e/_/_/package/4db1be536558d833e52e862fd84d64d75c2b3656/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android21-clang
+android-ndk/r21e: Creating CXX environment variable: /home/v/.conan/data/android-ndk/r21e/_/_/package/4db1be536558d833e52e862fd84d64d75c2b3656/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android21-clang++
+android-ndk/r21e: Creating AR environment variable: /home/v/.conan/data/android-ndk/r21e/_/_/package/4db1be536558d833e52e862fd84d64d75c2b3656/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android-ar
+android-ndk/r21e: Creating AS environment variable: /home/v/.conan/data/android-ndk/r21e/_/_/package/4db1be536558d833e52e862fd84d64d75c2b3656/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android-as
+android-ndk/r21e: Creating RANLIB environment variable: /home/v/.conan/data/android-ndk/r21e/_/_/package/4db1be536558d833e52e862fd84d64d75c2b3656/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android-ranlib
+android-ndk/r21e: Creating STRIP environment variable: /home/v/.conan/data/android-ndk/r21e/_/_/package/4db1be536558d833e52e862fd84d64d75c2b3656/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android-strip
+android-ndk/r21e: Creating ADDR2LINE environment variable: /home/v/.conan/data/android-ndk/r21e/_/_/package/4db1be536558d833e52e862fd84d64d75c2b3656/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android-addr2line
+android-ndk/r21e: Creating NM environment variable: /home/v/.conan/data/android-ndk/r21e/_/_/package/4db1be536558d833e52e862fd84d64d75c2b3656/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android-nm
+android-ndk/r21e: Creating OBJCOPY environment variable: /home/v/.conan/data/android-ndk/r21e/_/_/package/4db1be536558d833e52e862fd84d64d75c2b3656/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android-objcopy
+android-ndk/r21e: Creating OBJDUMP environment variable: /home/v/.conan/data/android-ndk/r21e/_/_/package/4db1be536558d833e52e862fd84d64d75c2b3656/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android-objdump
+android-ndk/r21e: Creating READELF environment variable: /home/v/.conan/data/android-ndk/r21e/_/_/package/4db1be536558d833e52e862fd84d64d75c2b3656/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android-readelf
+android-ndk/r21e: Creating ELFEDIT environment variable: /home/v/.conan/data/android-ndk/r21e/_/_/package/4db1be536558d833e52e862fd84d64d75c2b3656/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android-elfedit
+android-ndk/r21e: Creating LD environment variable: /home/v/.conan/data/android-ndk/r21e/_/_/package/4db1be536558d833e52e862fd84d64d75c2b3656/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android-ld
+android-ndk/r21e: Creating CONAN_CMAKE_PROGRAM environment variable: /home/v/.conan/data/android-ndk/r21e/_/_/package/4db1be536558d833e52e862fd84d64d75c2b3656/cmake-wrapper
+android-ndk/r21e: Creating CC environment variable: /home/v/.conan/data/android-ndk/r21e/_/_/package/4db1be536558d833e52e862fd84d64d75c2b3656/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android21-clang
+android-ndk/r21e: Creating CXX environment variable: /home/v/.conan/data/android-ndk/r21e/_/_/package/4db1be536558d833e52e862fd84d64d75c2b3656/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android21-clang++
+android-ndk/r21e: Creating AR environment variable: /home/v/.conan/data/android-ndk/r21e/_/_/package/4db1be536558d833e52e862fd84d64d75c2b3656/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android-ar
+android-ndk/r21e: Creating AS environment variable: /home/v/.conan/data/android-ndk/r21e/_/_/package/4db1be536558d833e52e862fd84d64d75c2b3656/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android-as
+android-ndk/r21e: Creating RANLIB environment variable: /home/v/.conan/data/android-ndk/r21e/_/_/package/4db1be536558d833e52e862fd84d64d75c2b3656/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android-ranlib
+android-ndk/r21e: Creating STRIP environment variable: /home/v/.conan/data/android-ndk/r21e/_/_/package/4db1be536558d833e52e862fd84d64d75c2b3656/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android-strip
+android-ndk/r21e: Creating ADDR2LINE environment variable: /home/v/.conan/data/android-ndk/r21e/_/_/package/4db1be536558d833e52e862fd84d64d75c2b3656/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android-addr2line
+android-ndk/r21e: Creating NM environment variable: /home/v/.conan/data/android-ndk/r21e/_/_/package/4db1be536558d833e52e862fd84d64d75c2b3656/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android-nm
+android-ndk/r21e: Creating OBJCOPY environment variable: /home/v/.conan/data/android-ndk/r21e/_/_/package/4db1be536558d833e52e862fd84d64d75c2b3656/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android-objcopy
+android-ndk/r21e: Creating OBJDUMP environment variable: /home/v/.conan/data/android-ndk/r21e/_/_/package/4db1be536558d833e52e862fd84d64d75c2b3656/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android-objdump
+android-ndk/r21e: Creating READELF environment variable: /home/v/.conan/data/android-ndk/r21e/_/_/package/4db1be536558d833e52e862fd84d64d75c2b3656/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android-readelf
+android-ndk/r21e: Creating ELFEDIT environment variable: /home/v/.conan/data/android-ndk/r21e/_/_/package/4db1be536558d833e52e862fd84d64d75c2b3656/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android-elfedit
+android-ndk/r21e: Creating LD environment variable: /home/v/.conan/data/android-ndk/r21e/_/_/package/4db1be536558d833e52e862fd84d64d75c2b3656/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android-ld
+android-ndk/r21e: Creating CC environment variable: /home/v/.conan/data/android-ndk/r21e/_/_/package/4db1be536558d833e52e862fd84d64d75c2b3656/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android21-clang
+android-ndk/r21e: Creating CXX environment variable: /home/v/.conan/data/android-ndk/r21e/_/_/package/4db1be536558d833e52e862fd84d64d75c2b3656/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android21-clang++
+android-ndk/r21e: Creating AR environment variable: /home/v/.conan/data/android-ndk/r21e/_/_/package/4db1be536558d833e52e862fd84d64d75c2b3656/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android-ar
+android-ndk/r21e: Creating AS environment variable: /home/v/.conan/data/android-ndk/r21e/_/_/package/4db1be536558d833e52e862fd84d64d75c2b3656/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android-as
+android-ndk/r21e: Creating RANLIB environment variable: /home/v/.conan/data/android-ndk/r21e/_/_/package/4db1be536558d833e52e862fd84d64d75c2b3656/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android-ranlib
+android-ndk/r21e: Creating STRIP environment variable: /home/v/.conan/data/android-ndk/r21e/_/_/package/4db1be536558d833e52e862fd84d64d75c2b3656/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android-strip
+android-ndk/r21e: Creating ADDR2LINE environment variable: /home/v/.conan/data/android-ndk/r21e/_/_/package/4db1be536558d833e52e862fd84d64d75c2b3656/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android-addr2line
+android-ndk/r21e: Creating NM environment variable: /home/v/.conan/data/android-ndk/r21e/_/_/package/4db1be536558d833e52e862fd84d64d75c2b3656/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android-nm
+android-ndk/r21e: Creating OBJCOPY environment variable: /home/v/.conan/data/android-ndk/r21e/_/_/package/4db1be536558d833e52e862fd84d64d75c2b3656/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android-objcopy
+android-ndk/r21e: Creating OBJDUMP environment variable: /home/v/.conan/data/android-ndk/r21e/_/_/package/4db1be536558d833e52e862fd84d64d75c2b3656/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android-objdump
+android-ndk/r21e: Creating READELF environment variable: /home/v/.conan/data/android-ndk/r21e/_/_/package/4db1be536558d833e52e862fd84d64d75c2b3656/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android-readelf
+android-ndk/r21e: Creating ELFEDIT environment variable: /home/v/.conan/data/android-ndk/r21e/_/_/package/4db1be536558d833e52e862fd84d64d75c2b3656/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android-elfedit
+android-ndk/r21e: Creating LD environment variable: /home/v/.conan/data/android-ndk/r21e/_/_/package/4db1be536558d833e52e862fd84d64d75c2b3656/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android-ld
+android-ndk/r21e: Creating CONAN_CMAKE_PROGRAM environment variable: /home/v/.conan/data/android-ndk/r21e/_/_/package/4db1be536558d833e52e862fd84d64d75c2b3656/cmake-wrapper
+android-ndk/r21e: Creating CC environment variable: /home/v/.conan/data/android-ndk/r21e/_/_/package/4db1be536558d833e52e862fd84d64d75c2b3656/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android21-clang
+android-ndk/r21e: Creating CXX environment variable: /home/v/.conan/data/android-ndk/r21e/_/_/package/4db1be536558d833e52e862fd84d64d75c2b3656/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android21-clang++
+android-ndk/r21e: Creating AR environment variable: /home/v/.conan/data/android-ndk/r21e/_/_/package/4db1be536558d833e52e862fd84d64d75c2b3656/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android-ar
+android-ndk/r21e: Creating AS environment variable: /home/v/.conan/data/android-ndk/r21e/_/_/package/4db1be536558d833e52e862fd84d64d75c2b3656/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android-as
+android-ndk/r21e: Creating RANLIB environment variable: /home/v/.conan/data/android-ndk/r21e/_/_/package/4db1be536558d833e52e862fd84d64d75c2b3656/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android-ranlib
+android-ndk/r21e: Creating STRIP environment variable: /home/v/.conan/data/android-ndk/r21e/_/_/package/4db1be536558d833e52e862fd84d64d75c2b3656/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android-strip
+android-ndk/r21e: Creating ADDR2LINE environment variable: /home/v/.conan/data/android-ndk/r21e/_/_/package/4db1be536558d833e52e862fd84d64d75c2b3656/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android-addr2line
+android-ndk/r21e: Creating NM environment variable: /home/v/.conan/data/android-ndk/r21e/_/_/package/4db1be536558d833e52e862fd84d64d75c2b3656/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android-nm
+android-ndk/r21e: Creating OBJCOPY environment variable: /home/v/.conan/data/android-ndk/r21e/_/_/package/4db1be536558d833e52e862fd84d64d75c2b3656/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android-objcopy
+android-ndk/r21e: Creating OBJDUMP environment variable: /home/v/.conan/data/android-ndk/r21e/_/_/package/4db1be536558d833e52e862fd84d64d75c2b3656/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android-objdump
+android-ndk/r21e: Creating READELF environment variable: /home/v/.conan/data/android-ndk/r21e/_/_/package/4db1be536558d833e52e862fd84d64d75c2b3656/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android-readelf
+android-ndk/r21e: Creating ELFEDIT environment variable: /home/v/.conan/data/android-ndk/r21e/_/_/package/4db1be536558d833e52e862fd84d64d75c2b3656/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android-elfedit
+android-ndk/r21e: Creating LD environment variable: /home/v/.conan/data/android-ndk/r21e/_/_/package/4db1be536558d833e52e862fd84d64d75c2b3656/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android-ld
+android-ndk/r21e: Creating CC environment variable: /home/v/.conan/data/android-ndk/r21e/_/_/package/4db1be536558d833e52e862fd84d64d75c2b3656/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android21-clang
+android-ndk/r21e: Creating CXX environment variable: /home/v/.conan/data/android-ndk/r21e/_/_/package/4db1be536558d833e52e862fd84d64d75c2b3656/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android21-clang++
+android-ndk/r21e: Creating AR environment variable: /home/v/.conan/data/android-ndk/r21e/_/_/package/4db1be536558d833e52e862fd84d64d75c2b3656/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android-ar
+android-ndk/r21e: Creating AS environment variable: /home/v/.conan/data/android-ndk/r21e/_/_/package/4db1be536558d833e52e862fd84d64d75c2b3656/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android-as
+android-ndk/r21e: Creating RANLIB environment variable: /home/v/.conan/data/android-ndk/r21e/_/_/package/4db1be536558d833e52e862fd84d64d75c2b3656/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android-ranlib
+android-ndk/r21e: Creating STRIP environment variable: /home/v/.conan/data/android-ndk/r21e/_/_/package/4db1be536558d833e52e862fd84d64d75c2b3656/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android-strip
+android-ndk/r21e: Creating ADDR2LINE environment variable: /home/v/.conan/data/android-ndk/r21e/_/_/package/4db1be536558d833e52e862fd84d64d75c2b3656/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android-addr2line
+android-ndk/r21e: Creating NM environment variable: /home/v/.conan/data/android-ndk/r21e/_/_/package/4db1be536558d833e52e862fd84d64d75c2b3656/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android-nm
+android-ndk/r21e: Creating OBJCOPY environment variable: /home/v/.conan/data/android-ndk/r21e/_/_/package/4db1be536558d833e52e862fd84d64d75c2b3656/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android-objcopy
+android-ndk/r21e: Creating OBJDUMP environment variable: /home/v/.conan/data/android-ndk/r21e/_/_/package/4db1be536558d833e52e862fd84d64d75c2b3656/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android-objdump
+android-ndk/r21e: Creating READELF environment variable: /home/v/.conan/data/android-ndk/r21e/_/_/package/4db1be536558d833e52e862fd84d64d75c2b3656/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android-readelf
+android-ndk/r21e: Creating ELFEDIT environment variable: /home/v/.conan/data/android-ndk/r21e/_/_/package/4db1be536558d833e52e862fd84d64d75c2b3656/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android-elfedit
+android-ndk/r21e: Creating LD environment variable: /home/v/.conan/data/android-ndk/r21e/_/_/package/4db1be536558d833e52e862fd84d64d75c2b3656/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android-ld
+android-ndk/r21e: Creating CONAN_CMAKE_PROGRAM environment variable: /home/v/.conan/data/android-ndk/r21e/_/_/package/4db1be536558d833e52e862fd84d64d75c2b3656/cmake-wrapper
+android-ndk/r21e: Creating CC environment variable: /home/v/.conan/data/android-ndk/r21e/_/_/package/4db1be536558d833e52e862fd84d64d75c2b3656/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android21-clang
+android-ndk/r21e: Creating CXX environment variable: /home/v/.conan/data/android-ndk/r21e/_/_/package/4db1be536558d833e52e862fd84d64d75c2b3656/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android21-clang++
+android-ndk/r21e: Creating AR environment variable: /home/v/.conan/data/android-ndk/r21e/_/_/package/4db1be536558d833e52e862fd84d64d75c2b3656/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android-ar
+android-ndk/r21e: Creating AS environment variable: /home/v/.conan/data/android-ndk/r21e/_/_/package/4db1be536558d833e52e862fd84d64d75c2b3656/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android-as
+android-ndk/r21e: Creating RANLIB environment variable: /home/v/.conan/data/android-ndk/r21e/_/_/package/4db1be536558d833e52e862fd84d64d75c2b3656/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android-ranlib
+android-ndk/r21e: Creating STRIP environment variable: /home/v/.conan/data/android-ndk/r21e/_/_/package/4db1be536558d833e52e862fd84d64d75c2b3656/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android-strip
+android-ndk/r21e: Creating ADDR2LINE environment variable: /home/v/.conan/data/android-ndk/r21e/_/_/package/4db1be536558d833e52e862fd84d64d75c2b3656/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android-addr2line
+android-ndk/r21e: Creating NM environment variable: /home/v/.conan/data/android-ndk/r21e/_/_/package/4db1be536558d833e52e862fd84d64d75c2b3656/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android-nm
+android-ndk/r21e: Creating OBJCOPY environment variable: /home/v/.conan/data/android-ndk/r21e/_/_/package/4db1be536558d833e52e862fd84d64d75c2b3656/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android-objcopy
+android-ndk/r21e: Creating OBJDUMP environment variable: /home/v/.conan/data/android-ndk/r21e/_/_/package/4db1be536558d833e52e862fd84d64d75c2b3656/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android-objdump
+android-ndk/r21e: Creating READELF environment variable: /home/v/.conan/data/android-ndk/r21e/_/_/package/4db1be536558d833e52e862fd84d64d75c2b3656/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android-readelf
+android-ndk/r21e: Creating ELFEDIT environment variable: /home/v/.conan/data/android-ndk/r21e/_/_/package/4db1be536558d833e52e862fd84d64d75c2b3656/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android-elfedit
+android-ndk/r21e: Creating LD environment variable: /home/v/.conan/data/android-ndk/r21e/_/_/package/4db1be536558d833e52e862fd84d64d75c2b3656/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android-ld
+android-ndk/r21e: Creating CC environment variable: /home/v/.conan/data/android-ndk/r21e/_/_/package/4db1be536558d833e52e862fd84d64d75c2b3656/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android21-clang
+android-ndk/r21e: Creating CXX environment variable: /home/v/.conan/data/android-ndk/r21e/_/_/package/4db1be536558d833e52e862fd84d64d75c2b3656/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android21-clang++
+android-ndk/r21e: Creating AR environment variable: /home/v/.conan/data/android-ndk/r21e/_/_/package/4db1be536558d833e52e862fd84d64d75c2b3656/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android-ar
+android-ndk/r21e: Creating AS environment variable: /home/v/.conan/data/android-ndk/r21e/_/_/package/4db1be536558d833e52e862fd84d64d75c2b3656/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android-as
+android-ndk/r21e: Creating RANLIB environment variable: /home/v/.conan/data/android-ndk/r21e/_/_/package/4db1be536558d833e52e862fd84d64d75c2b3656/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android-ranlib
+android-ndk/r21e: Creating STRIP environment variable: /home/v/.conan/data/android-ndk/r21e/_/_/package/4db1be536558d833e52e862fd84d64d75c2b3656/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android-strip
+android-ndk/r21e: Creating ADDR2LINE environment variable: /home/v/.conan/data/android-ndk/r21e/_/_/package/4db1be536558d833e52e862fd84d64d75c2b3656/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android-addr2line
+android-ndk/r21e: Creating NM environment variable: /home/v/.conan/data/android-ndk/r21e/_/_/package/4db1be536558d833e52e862fd84d64d75c2b3656/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android-nm
+android-ndk/r21e: Creating OBJCOPY environment variable: /home/v/.conan/data/android-ndk/r21e/_/_/package/4db1be536558d833e52e862fd84d64d75c2b3656/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android-objcopy
+android-ndk/r21e: Creating OBJDUMP environment variable: /home/v/.conan/data/android-ndk/r21e/_/_/package/4db1be536558d833e52e862fd84d64d75c2b3656/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android-objdump
+android-ndk/r21e: Creating READELF environment variable: /home/v/.conan/data/android-ndk/r21e/_/_/package/4db1be536558d833e52e862fd84d64d75c2b3656/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android-readelf
+android-ndk/r21e: Creating ELFEDIT environment variable: /home/v/.conan/data/android-ndk/r21e/_/_/package/4db1be536558d833e52e862fd84d64d75c2b3656/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android-elfedit
+android-ndk/r21e: Creating LD environment variable: /home/v/.conan/data/android-ndk/r21e/_/_/package/4db1be536558d833e52e862fd84d64d75c2b3656/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android-ld
+libcxx/ue4@adamrehn/profile: Already installed!
+ue4util/ue4@adamrehn/profile: Already installed!
+libjpeg/9d: Applying build-requirement: android-ndk/r21e
+libjpeg/9d: Copying sources to build folder
+libjpeg/9d: Building your package in /home/v/.conan/data/libjpeg/9d/_/_/build/c2498eaf18750fcd4767c5573c0a4e8b21f5728d
+libjpeg/9d: Generator txt created conanbuildinfo.txt
+libjpeg/9d: Aggregating env generators
+libjpeg/9d: Calling build()
+libjpeg/9d: Calling:
+ > source_subfolder/configure '--enable-shared=no' '--enable-static=yes' '--prefix=/home/v/.conan/data/libjpeg/9d/_/_/package/c2498eaf18750fcd4767c5573c0a4e8b21f5728d' '--bindir=${prefix}/bin' '--sbindir=${prefix}/bin' '--libexecdir=${prefix}/bin' '--libdir=${prefix}/lib' '--includedir=${prefix}/include' '--oldincludedir=${prefix}/include' '--datarootdir=${prefix}/share' --build=x86_64-linux-gnu --host=aarch64-linux-android
+checking build system type... x86_64-pc-linux-gnu
+checking host system type... aarch64-unknown-linux-android
+checking target system type... aarch64-unknown-linux-android
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking for aarch64-linux-android-strip... /home/v/.conan/data/android-ndk/r21e/_/_/package/4db1be536558d833e52e862fd84d64d75c2b3656/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android-strip
+checking for a thread-safe mkdir -p... /usr/bin/mkdir -p
+checking for gawk... no
+checking for mawk... mawk
+checking whether make sets $(MAKE)... yes
+checking whether make supports nested variables... yes
+checking whether make supports nested variables... (cached) yes
+checking whether to enable maintainer-specific portions of Makefiles... no
+checking for aarch64-linux-android-gcc... /home/v/.conan/data/android-ndk/r21e/_/_/package/4db1be536558d833e52e862fd84d64d75c2b3656/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android21-clang
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... yes
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether /home/v/.conan/data/android-ndk/r21e/_/_/package/4db1be536558d833e52e862fd84d64d75c2b3656/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android21-clang accepts -g... yes
+checking for /home/v/.conan/data/android-ndk/r21e/_/_/package/4db1be536558d833e52e862fd84d64d75c2b3656/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android21-clang option to accept ISO C89... none needed
+checking whether /home/v/.conan/data/android-ndk/r21e/_/_/package/4db1be536558d833e52e862fd84d64d75c2b3656/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android21-clang understands -c and -o together... yes
+checking whether make supports the include directive... yes (GNU style)
+checking dependency style of /home/v/.conan/data/android-ndk/r21e/_/_/package/4db1be536558d833e52e862fd84d64d75c2b3656/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android21-clang... gcc3
+checking for /home/v/.conan/data/android-ndk/r21e/_/_/package/4db1be536558d833e52e862fd84d64d75c2b3656/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android21-clang option to accept ISO C99... none needed
+checking for /home/v/.conan/data/android-ndk/r21e/_/_/package/4db1be536558d833e52e862fd84d64d75c2b3656/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android21-clang option to accept ISO Standard C... (cached) none needed
+checking how to run the C preprocessor... /home/v/.conan/data/android-ndk/r21e/_/_/package/4db1be536558d833e52e862fd84d64d75c2b3656/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android21-clang -E
+checking whether make sets $(MAKE)... (cached) yes
+checking whether ln -s works... yes
+checking for aarch64-linux-android-ar... /home/v/.conan/data/android-ndk/r21e/_/_/package/4db1be536558d833e52e862fd84d64d75c2b3656/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android-ar
+checking the archiver (/home/v/.conan/data/android-ndk/r21e/_/_/package/4db1be536558d833e52e862fd84d64d75c2b3656/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android-ar) interface... ar
+checking if LD -Wl,--version-script works... yes
+checking for function prototypes... yes
+checking for grep that handles long lines and -e... /usr/bin/grep
+checking for egrep... /usr/bin/grep -E
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking stddef.h usability... yes
+checking stddef.h presence... yes
+checking for stddef.h... yes
+checking for stdlib.h... (cached) yes
+checking locale.h usability... yes
+checking locale.h presence... yes
+checking for locale.h... yes
+checking for string.h... (cached) yes
+checking for size_t... yes
+checking for type unsigned char... yes
+checking for type unsigned short... yes
+checking for type void... yes
+checking for an ANSI C-conforming const... yes
+checking for inline... __inline__
+checking for broken incomplete types... ok
+checking for short external names... ok
+checking to see if char is signed... configure: WARNING: Assuming that char is signed on target machine.
+    If it is unsigned, this will be a little bit inefficient.
+checking to see if right shift is signed... Assuming that right shift is signed on target machine.
+checking to see if fopen accepts b spec... Assuming that it does.
+checking how to print strings... printf
+checking for a sed that does not truncate output... /usr/bin/sed
+checking for fgrep... /usr/bin/grep -F
+checking for ld used by /home/v/.conan/data/android-ndk/r21e/_/_/package/4db1be536558d833e52e862fd84d64d75c2b3656/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android21-clang... /home/v/.conan/data/android-ndk/r21e/_/_/package/4db1be536558d833e52e862fd84d64d75c2b3656/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android-ld
+checking if the linker (/home/v/.conan/data/android-ndk/r21e/_/_/package/4db1be536558d833e52e862fd84d64d75c2b3656/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android-ld) is GNU ld... yes
+checking for BSD- or MS-compatible name lister (nm)... /home/v/.conan/data/android-ndk/r21e/_/_/package/4db1be536558d833e52e862fd84d64d75c2b3656/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android-nm
+checking the name lister (/home/v/.conan/data/android-ndk/r21e/_/_/package/4db1be536558d833e52e862fd84d64d75c2b3656/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android-nm) interface... BSD nm
+checking the maximum length of command line arguments... 1572864
+checking how to convert x86_64-pc-linux-gnu file names to aarch64-unknown-linux-android format... func_convert_file_noop
+checking how to convert x86_64-pc-linux-gnu file names to toolchain format... func_convert_file_noop
+checking for /home/v/.conan/data/android-ndk/r21e/_/_/package/4db1be536558d833e52e862fd84d64d75c2b3656/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android-ld option to reload object files... -r
+checking for aarch64-linux-android-objdump... /home/v/.conan/data/android-ndk/r21e/_/_/package/4db1be536558d833e52e862fd84d64d75c2b3656/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android-objdump
+checking how to recognize dependent libraries... pass_all
+checking for aarch64-linux-android-dlltool... dlltool
+checking how to associate runtime and link libraries... printf %s\n
+checking for aarch64-linux-android-ar... (cached) /home/v/.conan/data/android-ndk/r21e/_/_/package/4db1be536558d833e52e862fd84d64d75c2b3656/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android-ar
+checking for archiver @FILE support... @
+checking for aarch64-linux-android-strip... (cached) /home/v/.conan/data/android-ndk/r21e/_/_/package/4db1be536558d833e52e862fd84d64d75c2b3656/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android-strip
+checking for aarch64-linux-android-ranlib... /home/v/.conan/data/android-ndk/r21e/_/_/package/4db1be536558d833e52e862fd84d64d75c2b3656/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android-ranlib
+checking command to parse /home/v/.conan/data/android-ndk/r21e/_/_/package/4db1be536558d833e52e862fd84d64d75c2b3656/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android-nm output from /home/v/.conan/data/android-ndk/r21e/_/_/package/4db1be536558d833e52e862fd84d64d75c2b3656/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android21-clang object... ok
+checking for sysroot... no
+checking for a working dd... /usr/bin/dd
+checking how to truncate binary pipes... /usr/bin/dd bs=4096 count=1
+checking for aarch64-linux-android-mt... no
+checking for mt... mt
+configure: WARNING: using cross tools not prefixed with host triplet
+checking if mt is a manifest tool... no
+checking for dlfcn.h... yes
+checking for objdir... .libs
+checking if /home/v/.conan/data/android-ndk/r21e/_/_/package/4db1be536558d833e52e862fd84d64d75c2b3656/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android21-clang supports -fno-rtti -fno-exceptions... yes
+checking for /home/v/.conan/data/android-ndk/r21e/_/_/package/4db1be536558d833e52e862fd84d64d75c2b3656/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android21-clang option to produce PIC... -fPIC -DPIC
+checking if /home/v/.conan/data/android-ndk/r21e/_/_/package/4db1be536558d833e52e862fd84d64d75c2b3656/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android21-clang PIC flag -fPIC -DPIC works... yes
+checking if /home/v/.conan/data/android-ndk/r21e/_/_/package/4db1be536558d833e52e862fd84d64d75c2b3656/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android21-clang static flag -static works... yes
+checking if /home/v/.conan/data/android-ndk/r21e/_/_/package/4db1be536558d833e52e862fd84d64d75c2b3656/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android21-clang supports -c -o file.o... yes
+checking if /home/v/.conan/data/android-ndk/r21e/_/_/package/4db1be536558d833e52e862fd84d64d75c2b3656/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android21-clang supports -c -o file.o... (cached) yes
+checking whether the /home/v/.conan/data/android-ndk/r21e/_/_/package/4db1be536558d833e52e862fd84d64d75c2b3656/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android21-clang linker (/home/v/.conan/data/android-ndk/r21e/_/_/package/4db1be536558d833e52e862fd84d64d75c2b3656/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android-ld) supports shared libraries... yes
+checking dynamic linker characteristics... Android linker
+checking how to hardcode library paths into programs... immediate
+checking whether stripping libraries is possible... yes
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... no
+checking whether to build static libraries... yes
+checking libjpeg version number... 9.4.0
+checking that generated files are newer than configure... done
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating libjpeg.pc
+config.status: creating jconfig.h
+config.status: executing depfiles commands
+config.status: executing libtool commands
+make  all-am
+make[1]: Entering directory '/home/v/.conan/data/libjpeg/9d/_/_/build/c2498eaf18750fcd4767c5573c0a4e8b21f5728d'
+  CC       cjpeg.o
+  CC       rdppm.o
+  CC       rdgif.o
+  CC       rdtarga.o
+  CC       rdrle.o
+  CC       rdbmp.o
+  CC       rdswitch.o
+  CC       cdjpeg.o
+  CC       jaricom.lo
+  CC       jcapimin.lo
+  CC       jcapistd.lo
+  CC       jcarith.lo
+  CC       jccoefct.lo
+  CC       jcdctmgr.lo
+  CC       jccolor.lo
+  CC       jchuff.lo
+  CC       jcinit.lo
+  CC       jcmainct.lo
+  CC       jcmaster.lo
+  CC       jcmarker.lo
+  CC       jcomapi.lo
+  CC       jcparam.lo
+  CC       jcsample.lo
+  CC       jcprepct.lo
+  CC       jctrans.lo
+  CC       jdapimin.lo
+  CC       jdapistd.lo
+  CC       jdarith.lo
+  CC       jdatadst.lo
+  CC       jdatasrc.lo
+  CC       jdcoefct.lo
+  CC       jdcolor.lo
+  CC       jddctmgr.lo
+  CC       jdhuff.lo
+  CC       jdinput.lo
+  CC       jdmainct.lo
+  CC       jdmarker.lo
+  CC       jdmaster.lo
+  CC       jdpostct.lo
+  CC       jdmerge.lo
+  CC       jdsample.lo
+  CC       jdtrans.lo
+  CC       jerror.lo
+  CC       jfdctflt.lo
+  CC       jfdctfst.lo
+  CC       jfdctint.lo
+  CC       jidctflt.lo
+  CC       jidctfst.lo
+  CC       jidctint.lo
+  CC       jquant1.lo
+  CC       jquant2.lo
+  CC       jutils.lo
+  CC       jmemmgr.lo
+  CC       jmemnobs.lo
+  CC       djpeg.o
+  CC       wrppm.o
+  CC       wrgif.o
+  CC       wrtarga.o
+  CC       wrrle.o
+  CC       wrbmp.o
+  CC       rdcolmap.o
+  CC       jpegtran.o
+  CC       transupp.o
+  CC       rdjpgcom.o
+  CC       wrjpgcom.o
+  CCLD     rdjpgcom
+  CCLD     wrjpgcom
+  CCLD     libjpeg.la
+  CCLD     cjpeg
+  CCLD     djpeg
+  CCLD     jpegtran
+make[1]: Leaving directory '/home/v/.conan/data/libjpeg/9d/_/_/build/c2498eaf18750fcd4767c5573c0a4e8b21f5728d'
+libjpeg/9d: Package 'c2498eaf18750fcd4767c5573c0a4e8b21f5728d' built
+libjpeg/9d: Build folder /home/v/.conan/data/libjpeg/9d/_/_/build/c2498eaf18750fcd4767c5573c0a4e8b21f5728d
+libjpeg/9d: Generated conaninfo.txt
+libjpeg/9d: Generated conanbuildinfo.txt
+libjpeg/9d: Generating the package
+libjpeg/9d: Package folder /home/v/.conan/data/libjpeg/9d/_/_/package/c2498eaf18750fcd4767c5573c0a4e8b21f5728d
+libjpeg/9d: Calling package()
+make[1]: Entering directory '/home/v/.conan/data/libjpeg/9d/_/_/build/c2498eaf18750fcd4767c5573c0a4e8b21f5728d'
+/bin/bash /home/v/.conan/data/libjpeg/9d/_/_/build/c2498eaf18750fcd4767c5573c0a4e8b21f5728d/source_subfolder/install-sh -d /home/v/.conan/data/libjpeg/9d/_/_/package/c2498eaf18750fcd4767c5573c0a4e8b21f5728d/include
+ /usr/bin/mkdir -p '/home/v/.conan/data/libjpeg/9d/_/_/package/c2498eaf18750fcd4767c5573c0a4e8b21f5728d/lib'
+ /usr/bin/mkdir -p '/home/v/.conan/data/libjpeg/9d/_/_/package/c2498eaf18750fcd4767c5573c0a4e8b21f5728d/include'
+ /usr/bin/mkdir -p '/home/v/.conan/data/libjpeg/9d/_/_/package/c2498eaf18750fcd4767c5573c0a4e8b21f5728d/lib/pkgconfig'
+ /bin/bash ./libtool   --mode=install /usr/bin/install -c   libjpeg.la '/home/v/.conan/data/libjpeg/9d/_/_/package/c2498eaf18750fcd4767c5573c0a4e8b21f5728d/lib'
+ /usr/bin/mkdir -p '/home/v/.conan/data/libjpeg/9d/_/_/package/c2498eaf18750fcd4767c5573c0a4e8b21f5728d/share/man/man1'
+/usr/bin/install -c -m 644 jconfig.h /home/v/.conan/data/libjpeg/9d/_/_/package/c2498eaf18750fcd4767c5573c0a4e8b21f5728d/include/jconfig.h
+ /usr/bin/install -c -m 644 source_subfolder/jerror.h source_subfolder/jmorecfg.h source_subfolder/jpeglib.h '/home/v/.conan/data/libjpeg/9d/_/_/package/c2498eaf18750fcd4767c5573c0a4e8b21f5728d/include'
+ /usr/bin/install -c -m 644 libjpeg.pc '/home/v/.conan/data/libjpeg/9d/_/_/package/c2498eaf18750fcd4767c5573c0a4e8b21f5728d/lib/pkgconfig'
+ /usr/bin/install -c -m 644 source_subfolder/cjpeg.1 source_subfolder/djpeg.1 source_subfolder/jpegtran.1 source_subfolder/rdjpgcom.1 source_subfolder/wrjpgcom.1 '/home/v/.conan/data/libjpeg/9d/_/_/package/c2498eaf18750fcd4767c5573c0a4e8b21f5728d/share/man/man1'
+libtool: install: /usr/bin/install -c .libs/libjpeg.lai /home/v/.conan/data/libjpeg/9d/_/_/package/c2498eaf18750fcd4767c5573c0a4e8b21f5728d/lib/libjpeg.la
+libtool: install: /usr/bin/install -c .libs/libjpeg.a /home/v/.conan/data/libjpeg/9d/_/_/package/c2498eaf18750fcd4767c5573c0a4e8b21f5728d/lib/libjpeg.a
+libtool: install: chmod 644 /home/v/.conan/data/libjpeg/9d/_/_/package/c2498eaf18750fcd4767c5573c0a4e8b21f5728d/lib/libjpeg.a
+libtool: install: /home/v/.conan/data/android-ndk/r21e/_/_/package/4db1be536558d833e52e862fd84d64d75c2b3656/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android-ranlib /home/v/.conan/data/libjpeg/9d/_/_/package/c2498eaf18750fcd4767c5573c0a4e8b21f5728d/lib/libjpeg.a
+ /usr/bin/mkdir -p '/home/v/.conan/data/libjpeg/9d/_/_/package/c2498eaf18750fcd4767c5573c0a4e8b21f5728d/bin'
+  /bin/bash ./libtool   --mode=install /usr/bin/install -c cjpeg djpeg jpegtran rdjpgcom wrjpgcom '/home/v/.conan/data/libjpeg/9d/_/_/package/c2498eaf18750fcd4767c5573c0a4e8b21f5728d/bin'
+libtool: install: /usr/bin/install -c cjpeg /home/v/.conan/data/libjpeg/9d/_/_/package/c2498eaf18750fcd4767c5573c0a4e8b21f5728d/bin/cjpeg
+libtool: install: /usr/bin/install -c djpeg /home/v/.conan/data/libjpeg/9d/_/_/package/c2498eaf18750fcd4767c5573c0a4e8b21f5728d/bin/djpeg
+libtool: install: /usr/bin/install -c jpegtran /home/v/.conan/data/libjpeg/9d/_/_/package/c2498eaf18750fcd4767c5573c0a4e8b21f5728d/bin/jpegtran
+libtool: install: /usr/bin/install -c rdjpgcom /home/v/.conan/data/libjpeg/9d/_/_/package/c2498eaf18750fcd4767c5573c0a4e8b21f5728d/bin/rdjpgcom
+libtool: install: /usr/bin/install -c wrjpgcom /home/v/.conan/data/libjpeg/9d/_/_/package/c2498eaf18750fcd4767c5573c0a4e8b21f5728d/bin/wrjpgcom
+make[1]: Leaving directory '/home/v/.conan/data/libjpeg/9d/_/_/build/c2498eaf18750fcd4767c5573c0a4e8b21f5728d'
+libjpeg/9d package(): Packaged 1 '.a' file: libjpeg.a
+libjpeg/9d package(): Packaged 7 '.h' files
+libjpeg/9d package(): Packaged 1 '.c' file: transupp.c
+libjpeg/9d package(): Packaged 1 file: README
+libjpeg/9d: Package 'c2498eaf18750fcd4767c5573c0a4e8b21f5728d' created
+libjpeg/9d: Created package revision e6672d8d720a832f69cf8e052ca7a99f
+ue4lib/ue4@adamrehn/profile: Applying build-requirement: android-ndk/r21e
+ue4lib/ue4@adamrehn/profile: Copying sources to build folder
+ue4lib/ue4@adamrehn/profile: Building your package in /home/v/.conan/data/ue4lib/ue4/adamrehn/profile/build/5ab84d6acfe1f23c4fae0ab88f26e3a396351ac9
+ue4lib/ue4@adamrehn/profile: Generator txt created conanbuildinfo.txt
+ue4lib/ue4@adamrehn/profile: Aggregating env generators
+ue4lib/ue4@adamrehn/profile: Calling build()
+ue4lib/ue4@adamrehn/profile: Package '5ab84d6acfe1f23c4fae0ab88f26e3a396351ac9' built
+ue4lib/ue4@adamrehn/profile: Build folder /home/v/.conan/data/ue4lib/ue4/adamrehn/profile/build/5ab84d6acfe1f23c4fae0ab88f26e3a396351ac9
+ue4lib/ue4@adamrehn/profile: Generated conaninfo.txt
+ue4lib/ue4@adamrehn/profile: Generated conanbuildinfo.txt
+ue4lib/ue4@adamrehn/profile: Generating the package
+ue4lib/ue4@adamrehn/profile: Package folder /home/v/.conan/data/ue4lib/ue4/adamrehn/profile/package/5ab84d6acfe1f23c4fae0ab88f26e3a396351ac9
+ue4lib/ue4@adamrehn/profile: Calling package()
+ue4lib/ue4@adamrehn/profile package(): Packaged 2 '.py' files: __init__.py, ue4lib.py
+ue4lib/ue4@adamrehn/profile: Package '5ab84d6acfe1f23c4fae0ab88f26e3a396351ac9' created
+ue4lib/ue4@adamrehn/profile: Created package revision 9309f8b4412c9d0a7090620ddef3f891
+UElibPNG/ue4@adamrehn/4.27: Applying build-requirement: android-ndk/r21e
+UElibPNG/ue4@adamrehn/4.27: Copying sources to build folder
+UElibPNG/ue4@adamrehn/4.27: Building your package in /home/v/.conan/data/UElibPNG/ue4/adamrehn/4.27/build/4bee7863161e4817bcb525156305eee4e44ce246
+UElibPNG/ue4@adamrehn/4.27: Generator txt created conanbuildinfo.txt
+UElibPNG/ue4@adamrehn/4.27: Aggregating env generators
+UElibPNG/ue4@adamrehn/4.27: Calling build()
+UElibPNG/ue4@adamrehn/4.27: Package '4bee7863161e4817bcb525156305eee4e44ce246' built
+UElibPNG/ue4@adamrehn/4.27: Build folder /home/v/.conan/data/UElibPNG/ue4/adamrehn/4.27/build/4bee7863161e4817bcb525156305eee4e44ce246
+UElibPNG/ue4@adamrehn/4.27: Generated conaninfo.txt
+UElibPNG/ue4@adamrehn/4.27: Generated conanbuildinfo.txt
+UElibPNG/ue4@adamrehn/4.27: Generating the package
+UElibPNG/ue4@adamrehn/4.27: Package folder /home/v/.conan/data/UElibPNG/ue4/adamrehn/4.27/package/4bee7863161e4817bcb525156305eee4e44ce246
+UElibPNG/ue4@adamrehn/4.27: Calling package()
+UElibPNG/ue4@adamrehn/4.27 package(): Packaged 1 '.json' file: flags.json
+UElibPNG/ue4@adamrehn/4.27 package(): Packaged 1 '.a' file: libpng.a
+UElibPNG/ue4@adamrehn/4.27 package(): Packaged 31 '.c' files
+UElibPNG/ue4@adamrehn/4.27 package(): Packaged 16 '.h' files
+UElibPNG/ue4@adamrehn/4.27: Package '4bee7863161e4817bcb525156305eee4e44ce246' created
+UElibPNG/ue4@adamrehn/4.27: Created package revision 9fe2ad13e5c5b98f4d629e17f6ba2f5f
+zlib/ue4@adamrehn/4.27: Applying build-requirement: android-ndk/r21e
+zlib/ue4@adamrehn/4.27: Copying sources to build folder
+zlib/ue4@adamrehn/4.27: Building your package in /home/v/.conan/data/zlib/ue4/adamrehn/4.27/build/0db9651cd05022a4a40617522b024bc69a6aeaf1
+zlib/ue4@adamrehn/4.27: Generator txt created conanbuildinfo.txt
+zlib/ue4@adamrehn/4.27: Aggregating env generators
+zlib/ue4@adamrehn/4.27: Calling build()
+zlib/ue4@adamrehn/4.27: Package '0db9651cd05022a4a40617522b024bc69a6aeaf1' built
+zlib/ue4@adamrehn/4.27: Build folder /home/v/.conan/data/zlib/ue4/adamrehn/4.27/build/0db9651cd05022a4a40617522b024bc69a6aeaf1
+zlib/ue4@adamrehn/4.27: Generated conaninfo.txt
+zlib/ue4@adamrehn/4.27: Generated conanbuildinfo.txt
+zlib/ue4@adamrehn/4.27: Generating the package
+zlib/ue4@adamrehn/4.27: Package folder /home/v/.conan/data/zlib/ue4/adamrehn/4.27/package/0db9651cd05022a4a40617522b024bc69a6aeaf1
+zlib/ue4@adamrehn/4.27: Calling package()
+[HOOK - attribute_checker.py] pre_export(): WARN: Conanfile doesn't have 'license'. It is recommended to add it as attribute
+ue4lib/ue4@adamrehn/profile: WARN: This conanfile has no build step
+UElibPNG/ue4@adamrehn/4.27: WARN: This conanfile has no build step
+Using user-specified engine root: /home/v/2022/UnrealEngine
+zlib/ue4@adamrehn/4.27: WARN: This conanfile has no build step
+ERROR: zlib/ue4@adamrehn/4.27: Error in package() method, line 53
+	from ue4lib import UE4Lib
+	ModuleNotFoundError: No module named 'ue4lib'

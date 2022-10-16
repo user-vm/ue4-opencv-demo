@@ -1,0 +1,426 @@
+Exporting package recipe
+opencv-ue4/3.3.0@adamrehn/4.27: A new conanfile.py version was exported
+opencv-ue4/3.3.0@adamrehn/4.27: Folder: /home/v/.conan/data/opencv-ue4/3.3.0/adamrehn/4.27/export
+opencv-ue4/3.3.0@adamrehn/4.27: Package recipe modified in export, forcing source folder removal
+opencv-ue4/3.3.0@adamrehn/4.27: Use the --keep-source, -k option to skip it
+opencv-ue4/3.3.0@adamrehn/4.27: Exported revision: 489f80e5a028d4ab7d6d509caa3538b8
+Configuration:
+[settings]
+arch=x86_64
+arch_build=x86_64
+build_type=Release
+compiler=clang
+compiler.libcxx=libc++
+compiler.version=11
+os=Linux
+os_build=Linux
+[options]
+[build_requires]
+*: toolchain-wrapper/ue4@adamrehn/4.27
+[env]
+UNREAL_ENGINE_VERSION=4.27
+opencv-ue4/3.3.0@adamrehn/4.27: Forced build from source
+Installing package: opencv-ue4/3.3.0@adamrehn/4.27
+Requirements
+    UElibPNG/ue4@adamrehn/4.27 from local cache - Cache
+    libcxx/ue4@adamrehn/profile from local cache - Cache
+    libjpeg/9d from 'conancenter' - Cache
+    opencv-ue4/3.3.0@adamrehn/4.27 from local cache - Cache
+    ue4lib/ue4@adamrehn/profile from local cache - Cache
+    ue4util/ue4@adamrehn/profile from local cache - Cache
+    zlib/ue4@adamrehn/4.27 from local cache - Cache
+Packages
+    UElibPNG/ue4@adamrehn/4.27:4a8aa5a92eca740ec3100060d2a1f829bb028521 - Cache
+    libcxx/ue4@adamrehn/profile:5ab84d6acfe1f23c4fae0ab88f26e3a396351ac9 - Cache
+    libjpeg/9d:d988447fa516eac7400b2f34e2d4b89e42b4b1a8 - Cache
+    opencv-ue4/3.3.0@adamrehn/4.27:fdd803c226828823a6ee327f247d851f89d4b708 - Build
+    ue4lib/ue4@adamrehn/profile:5ab84d6acfe1f23c4fae0ab88f26e3a396351ac9 - Cache
+    ue4util/ue4@adamrehn/profile:5ab84d6acfe1f23c4fae0ab88f26e3a396351ac9 - Cache
+    zlib/ue4@adamrehn/4.27:4a8aa5a92eca740ec3100060d2a1f829bb028521 - Cache
+Build requirements
+    toolchain-wrapper/ue4@adamrehn/4.27 from local cache - Cache
+Build requirements packages
+    toolchain-wrapper/ue4@adamrehn/4.27:e64d7b5d1a4c7e2d7d0cbef6040191de1280331d - Cache
+
+Installing (downloading, building) binaries...
+libcxx/ue4@adamrehn/profile: Already installed!
+libjpeg/9d: Already installed!
+toolchain-wrapper/ue4@adamrehn/4.27: Already installed!
+ue4lib/ue4@adamrehn/profile: Already installed!
+ue4util/ue4@adamrehn/profile: Already installed!
+UElibPNG/ue4@adamrehn/4.27: Already installed!
+zlib/ue4@adamrehn/4.27: Already installed!
+opencv-ue4/3.3.0@adamrehn/4.27: Applying build-requirement: toolchain-wrapper/ue4@adamrehn/4.27
+opencv-ue4/3.3.0@adamrehn/4.27: Configuring sources in /home/v/.conan/data/opencv-ue4/3.3.0/adamrehn/4.27/source
+opencv-ue4/3.3.0@adamrehn/4.27: Copying sources to build folder
+opencv-ue4/3.3.0@adamrehn/4.27: Building your package in /home/v/.conan/data/opencv-ue4/3.3.0/adamrehn/4.27/build/fdd803c226828823a6ee327f247d851f89d4b708
+opencv-ue4/3.3.0@adamrehn/4.27: Generator cmake created conanbuildinfo.cmake
+opencv-ue4/3.3.0@adamrehn/4.27: Aggregating env generators
+opencv-ue4/3.3.0@adamrehn/4.27: Calling build()
+-- The CXX compiler identification is Clang 11.0.1
+-- The C compiler identification is Clang 11.0.1
+-- Check for working CXX compiler: /home/v/.conan/data/toolchain-wrapper/ue4/adamrehn/4.27/package/e64d7b5d1a4c7e2d7d0cbef6040191de1280331d/wrappers/clang++.py
+-- Check for working CXX compiler: /home/v/.conan/data/toolchain-wrapper/ue4/adamrehn/4.27/package/e64d7b5d1a4c7e2d7d0cbef6040191de1280331d/wrappers/clang++.py -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Check for working C compiler: /home/v/.conan/data/toolchain-wrapper/ue4/adamrehn/4.27/package/e64d7b5d1a4c7e2d7d0cbef6040191de1280331d/wrappers/clang.py
+-- Check for working C compiler: /home/v/.conan/data/toolchain-wrapper/ue4/adamrehn/4.27/package/e64d7b5d1a4c7e2d7d0cbef6040191de1280331d/wrappers/clang.py -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Performing Test HAVE_CXX11 (check file: cmake/checks/cxx11.cpp)
+-- Performing Test HAVE_CXX11 - Success
+-- Could NOT find PythonInterp (missing: PYTHON_EXECUTABLE) (Required is at least version "2.7")
+-- Could NOT find PythonInterp (missing: PYTHON_EXECUTABLE) (Required is at least version "2.6")
+-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3.4") 
+-- Could NOT find PythonLibs (missing: PYTHON_LIBRARIES PYTHON_INCLUDE_DIRS) (Required is exact version "3.8.10")
+-- Looking for ccache - not found
+-- Performing Test HAVE_CXX_FSIGNED_CHAR
+-- Performing Test HAVE_CXX_FSIGNED_CHAR - Success
+-- Performing Test HAVE_C_FSIGNED_CHAR
+-- Performing Test HAVE_C_FSIGNED_CHAR - Success
+-- Performing Test HAVE_CXX_W
+-- Performing Test HAVE_CXX_W - Success
+-- Performing Test HAVE_C_W
+-- Performing Test HAVE_C_W - Success
+-- Performing Test HAVE_CXX_WALL
+-- Performing Test HAVE_CXX_WALL - Success
+-- Performing Test HAVE_C_WALL
+-- Performing Test HAVE_C_WALL - Success
+-- Performing Test HAVE_CXX_WERROR_RETURN_TYPE
+-- Performing Test HAVE_CXX_WERROR_RETURN_TYPE - Success
+-- Performing Test HAVE_C_WERROR_RETURN_TYPE
+-- Performing Test HAVE_C_WERROR_RETURN_TYPE - Success
+-- Performing Test HAVE_CXX_WERROR_NON_VIRTUAL_DTOR
+-- Performing Test HAVE_CXX_WERROR_NON_VIRTUAL_DTOR - Success
+-- Performing Test HAVE_C_WERROR_NON_VIRTUAL_DTOR
+-- Performing Test HAVE_C_WERROR_NON_VIRTUAL_DTOR - Success
+-- Performing Test HAVE_CXX_WERROR_ADDRESS
+-- Performing Test HAVE_CXX_WERROR_ADDRESS - Success
+-- Performing Test HAVE_C_WERROR_ADDRESS
+-- Performing Test HAVE_C_WERROR_ADDRESS - Success
+-- Performing Test HAVE_CXX_WERROR_SEQUENCE_POINT
+-- Performing Test HAVE_CXX_WERROR_SEQUENCE_POINT - Success
+-- Performing Test HAVE_C_WERROR_SEQUENCE_POINT
+-- Performing Test HAVE_C_WERROR_SEQUENCE_POINT - Success
+-- Performing Test HAVE_CXX_WFORMAT
+-- Performing Test HAVE_CXX_WFORMAT - Success
+-- Performing Test HAVE_C_WFORMAT
+-- Performing Test HAVE_C_WFORMAT - Success
+-- Performing Test HAVE_CXX_WERROR_FORMAT_SECURITY
+-- Performing Test HAVE_CXX_WERROR_FORMAT_SECURITY - Success
+-- Performing Test HAVE_C_WERROR_FORMAT_SECURITY
+-- Performing Test HAVE_C_WERROR_FORMAT_SECURITY - Success
+-- Performing Test HAVE_CXX_WMISSING_DECLARATIONS
+-- Performing Test HAVE_CXX_WMISSING_DECLARATIONS - Success
+-- Performing Test HAVE_C_WMISSING_DECLARATIONS
+-- Performing Test HAVE_C_WMISSING_DECLARATIONS - Success
+-- Performing Test HAVE_CXX_WMISSING_PROTOTYPES
+-- Performing Test HAVE_CXX_WMISSING_PROTOTYPES - Success
+-- Performing Test HAVE_C_WMISSING_PROTOTYPES
+-- Performing Test HAVE_C_WMISSING_PROTOTYPES - Success
+-- Performing Test HAVE_CXX_WSTRICT_PROTOTYPES
+-- Performing Test HAVE_CXX_WSTRICT_PROTOTYPES - Success
+-- Performing Test HAVE_C_WSTRICT_PROTOTYPES
+-- Performing Test HAVE_C_WSTRICT_PROTOTYPES - Success
+-- Performing Test HAVE_CXX_WUNDEF
+-- Performing Test HAVE_CXX_WUNDEF - Success
+-- Performing Test HAVE_C_WUNDEF
+-- Performing Test HAVE_C_WUNDEF - Success
+-- Performing Test HAVE_CXX_WINIT_SELF
+-- Performing Test HAVE_CXX_WINIT_SELF - Success
+-- Performing Test HAVE_C_WINIT_SELF
+-- Performing Test HAVE_C_WINIT_SELF - Success
+-- Performing Test HAVE_CXX_WPOINTER_ARITH
+-- Performing Test HAVE_CXX_WPOINTER_ARITH - Success
+-- Performing Test HAVE_C_WPOINTER_ARITH
+-- Performing Test HAVE_C_WPOINTER_ARITH - Success
+-- Performing Test HAVE_CXX_WSHADOW
+-- Performing Test HAVE_CXX_WSHADOW - Success
+-- Performing Test HAVE_C_WSHADOW
+-- Performing Test HAVE_C_WSHADOW - Success
+-- Performing Test HAVE_CXX_WSIGN_PROMO
+-- Performing Test HAVE_CXX_WSIGN_PROMO - Success
+-- Performing Test HAVE_C_WSIGN_PROMO
+-- Performing Test HAVE_C_WSIGN_PROMO - Success
+-- Performing Test HAVE_CXX_WUNINITIALIZED
+-- Performing Test HAVE_CXX_WUNINITIALIZED - Success
+-- Performing Test HAVE_C_WUNINITIALIZED
+-- Performing Test HAVE_C_WUNINITIALIZED - Success
+-- Performing Test HAVE_CXX_WNO_NARROWING
+-- Performing Test HAVE_CXX_WNO_NARROWING - Success
+-- Performing Test HAVE_C_WNO_NARROWING
+-- Performing Test HAVE_C_WNO_NARROWING - Success
+-- Performing Test HAVE_CXX_WNO_DELETE_NON_VIRTUAL_DTOR
+-- Performing Test HAVE_CXX_WNO_DELETE_NON_VIRTUAL_DTOR - Success
+-- Performing Test HAVE_C_WNO_DELETE_NON_VIRTUAL_DTOR
+-- Performing Test HAVE_C_WNO_DELETE_NON_VIRTUAL_DTOR - Success
+-- Performing Test HAVE_CXX_WNO_UNNAMED_TYPE_TEMPLATE_ARGS
+-- Performing Test HAVE_CXX_WNO_UNNAMED_TYPE_TEMPLATE_ARGS - Success
+-- Performing Test HAVE_C_WNO_UNNAMED_TYPE_TEMPLATE_ARGS
+-- Performing Test HAVE_C_WNO_UNNAMED_TYPE_TEMPLATE_ARGS - Success
+-- Performing Test HAVE_CXX_WNO_COMMENT
+-- Performing Test HAVE_CXX_WNO_COMMENT - Success
+-- Performing Test HAVE_C_WNO_COMMENT
+-- Performing Test HAVE_C_WNO_COMMENT - Success
+-- Performing Test HAVE_CXX_FDIAGNOSTICS_SHOW_OPTION
+-- Performing Test HAVE_CXX_FDIAGNOSTICS_SHOW_OPTION - Success
+-- Performing Test HAVE_C_FDIAGNOSTICS_SHOW_OPTION
+-- Performing Test HAVE_C_FDIAGNOSTICS_SHOW_OPTION - Success
+-- Performing Test HAVE_CXX_WNO_LONG_LONG
+-- Performing Test HAVE_CXX_WNO_LONG_LONG - Success
+-- Performing Test HAVE_C_WNO_LONG_LONG
+-- Performing Test HAVE_C_WNO_LONG_LONG - Success
+-- Performing Test HAVE_CXX_PTHREAD
+-- Performing Test HAVE_CXX_PTHREAD - Success
+-- Performing Test HAVE_C_PTHREAD
+-- Performing Test HAVE_C_PTHREAD - Success
+-- Performing Test HAVE_CXX_QUNUSED_ARGUMENTS
+-- Performing Test HAVE_CXX_QUNUSED_ARGUMENTS - Success
+-- Performing Test HAVE_C_QUNUSED_ARGUMENTS
+-- Performing Test HAVE_C_QUNUSED_ARGUMENTS - Success
+-- Performing Test HAVE_CXX_FOMIT_FRAME_POINTER
+-- Performing Test HAVE_CXX_FOMIT_FRAME_POINTER - Success
+-- Performing Test HAVE_C_FOMIT_FRAME_POINTER
+-- Performing Test HAVE_C_FOMIT_FRAME_POINTER - Success
+-- Performing Test HAVE_CXX_FFUNCTION_SECTIONS
+-- Performing Test HAVE_CXX_FFUNCTION_SECTIONS - Success
+-- Performing Test HAVE_C_FFUNCTION_SECTIONS
+-- Performing Test HAVE_C_FFUNCTION_SECTIONS - Success
+-- WARNING: Option ENABLE_POPCNT='OFF' is deprecated and should not be used anymore
+--          Behaviour of this option is not backward compatible
+--          Refer to 'CPU_BASELINE'/'CPU_DISPATCH' CMake options documentation
+-- Performing Test HAVE_CXX_MSSE (check file: cmake/checks/cpu_sse.cpp)
+-- Performing Test HAVE_CXX_MSSE - Success
+-- Performing Test HAVE_CXX_MSSE2 (check file: cmake/checks/cpu_sse2.cpp)
+-- Performing Test HAVE_CXX_MSSE2 - Success
+-- Performing Test HAVE_CXX_MSSE3 (check file: cmake/checks/cpu_sse3.cpp)
+-- Performing Test HAVE_CXX_MSSE3 - Success
+-- Performing Test HAVE_CXX_MSSSE3 (check file: cmake/checks/cpu_ssse3.cpp)
+-- Performing Test HAVE_CXX_MSSSE3 - Success
+-- Performing Test HAVE_CXX_MSSE4_1 (check file: cmake/checks/cpu_sse41.cpp)
+-- Performing Test HAVE_CXX_MSSE4_1 - Success
+-- Performing Test HAVE_CXX_MPOPCNT (check file: cmake/checks/cpu_popcnt.cpp)
+-- Performing Test HAVE_CXX_MPOPCNT - Success
+-- Performing Test HAVE_CXX_MSSE4_2 (check file: cmake/checks/cpu_sse42.cpp)
+-- Performing Test HAVE_CXX_MSSE4_2 - Success
+-- Performing Test HAVE_CXX_MF16C (check file: cmake/checks/cpu_fp16.cpp)
+-- Performing Test HAVE_CXX_MF16C - Success
+-- Performing Test HAVE_CXX_MFMA
+-- Performing Test HAVE_CXX_MFMA - Success
+-- Performing Test HAVE_CXX_MAVX (check file: cmake/checks/cpu_avx.cpp)
+-- Performing Test HAVE_CXX_MAVX - Success
+-- Performing Test HAVE_CXX_MAVX2 (check file: cmake/checks/cpu_avx2.cpp)
+-- Performing Test HAVE_CXX_MAVX2 - Success
+-- Performing Test HAVE_CPU_BASELINE_FLAGS
+-- Performing Test HAVE_CPU_BASELINE_FLAGS - Success
+-- Performing Test HAVE_CPU_DISPATCH_FLAGS_SSE4_1
+-- Performing Test HAVE_CPU_DISPATCH_FLAGS_SSE4_1 - Success
+-- Performing Test HAVE_CPU_DISPATCH_FLAGS_SSE4_2
+-- Performing Test HAVE_CPU_DISPATCH_FLAGS_SSE4_2 - Success
+-- Performing Test HAVE_CPU_DISPATCH_FLAGS_FP16
+-- Performing Test HAVE_CPU_DISPATCH_FLAGS_FP16 - Success
+-- Performing Test HAVE_CPU_DISPATCH_FLAGS_AVX
+-- Performing Test HAVE_CPU_DISPATCH_FLAGS_AVX - Success
+-- Performing Test HAVE_CPU_DISPATCH_FLAGS_AVX2
+-- Performing Test HAVE_CPU_DISPATCH_FLAGS_AVX2 - Success
+-- Performing Test HAVE_CXX_FVISIBILITY_HIDDEN
+-- Performing Test HAVE_CXX_FVISIBILITY_HIDDEN - Success
+-- Performing Test HAVE_C_FVISIBILITY_HIDDEN
+-- Performing Test HAVE_C_FVISIBILITY_HIDDEN - Success
+-- Performing Test HAVE_CXX_FVISIBILITY_INLINES_HIDDEN
+-- Performing Test HAVE_CXX_FVISIBILITY_INLINES_HIDDEN - Success
+-- Performing Test HAVE_C_FVISIBILITY_INLINES_HIDDEN
+-- Performing Test HAVE_C_FVISIBILITY_INLINES_HIDDEN - Success
+-- Looking for pthread.h
+-- Looking for pthread.h - found
+-- Looking for posix_memalign
+-- Looking for posix_memalign - found
+-- Looking for malloc.h
+-- Looking for malloc.h - found
+-- Looking for memalign
+-- Looking for memalign - found
+-- Check if the system is big endian
+-- Searching 16 bit integer
+-- Looking for sys/types.h
+-- Looking for sys/types.h - found
+-- Looking for stdint.h
+-- Looking for stdint.h - found
+-- Looking for stddef.h
+-- Looking for stddef.h - found
+-- Check size of unsigned short
+-- Check size of unsigned short - done
+-- Using unsigned short
+-- Check if the system is big endian - little endian
+-- Found ZLIB: /home/v/.conan/data/zlib/ue4/adamrehn/4.27/package/4a8aa5a92eca740ec3100060d2a1f829bb028521/lib/libz_fPIC.a (found suitable version "1.2.8", minimum required is "1.2.3") 
+-- Found JPEG: /home/v/.conan/data/libjpeg/9d/_/_/package/d988447fa516eac7400b2f34e2d4b89e42b4b1a8/lib/libjpeg.a (found version "90") 
+-- Found ZLIB: /home/v/.conan/data/zlib/ue4/adamrehn/4.27/package/4a8aa5a92eca740ec3100060d2a1f829bb028521/lib/libz_fPIC.a (found version "1.2.8") 
+-- Found PNG: /home/v/.conan/data/UElibPNG/ue4/adamrehn/4.27/package/4a8aa5a92eca740ec3100060d2a1f829bb028521/lib/libpng.a (found version "1.5.2") 
+-- Looking for /home/v/.conan/data/UElibPNG/ue4/adamrehn/4.27/package/4a8aa5a92eca740ec3100060d2a1f829bb028521/include/libpng/png.h
+-- Looking for /home/v/.conan/data/UElibPNG/ue4/adamrehn/4.27/package/4a8aa5a92eca740ec3100060d2a1f829bb028521/include/libpng/png.h - not found
+-- Checking for module 'gtk+-3.0'
+--   No package 'gtk+-3.0' found
+-- Checking for module 'gtk+-2.0'
+--   Found gtk+-2.0, version 2.24.32
+-- Checking for module 'gthread-2.0'
+--   Found gthread-2.0, version 2.64.6
+-- Checking for module 'libdc1394-2'
+--   No package 'libdc1394-2' found
+-- Checking for module 'libdc1394'
+--   No package 'libdc1394' found
+-- Looking for linux/videodev.h
+-- Looking for linux/videodev.h - not found
+-- Looking for linux/videodev2.h
+-- Looking for linux/videodev2.h - found
+-- Looking for sys/videoio.h
+-- Looking for sys/videoio.h - not found
+-- Checking for module 'libgphoto2'
+--   No package 'libgphoto2' found
+-- Could NOT find Doxygen (missing: DOXYGEN_EXECUTABLE) 
+-- Found JNI: /home/v/android-studio/jre/jre/lib/amd64/libjawt.so  
+-- Excluding from source files list: /home/v/.conan/data/opencv-ue4/3.3.0/adamrehn/4.27/build/fdd803c226828823a6ee327f247d851f89d4b708/modules/imgproc/accum.neon.cpp
+-- Performing Test HAVE_CXX_WNO_DEPRECATED_DECLARATIONS
+-- Performing Test HAVE_CXX_WNO_DEPRECATED_DECLARATIONS - Success
+-- 
+-- General configuration for OpenCV 3.3.0 =====================================
+--   Version control:               3.3.0-dirty
+-- 
+--   Platform:
+--     Timestamp:                   2022-08-23T12:32:06Z
+--     Host:                        Linux 5.15.0-46-generic x86_64
+--     CMake:                       3.16.3
+--     CMake generator:             Unix Makefiles
+--     CMake build tool:            /usr/bin/make
+--     Configuration:               Release
+-- 
+--   CPU/HW features:
+--     Baseline:                    SSE SSE2 SSE3
+--       requested:                 SSE3
+--       disabled:                  POPCNT
+--     Dispatched code generation:  SSE4_1 SSE4_2 FP16 AVX AVX2
+--       requested:                 SSE4_1 SSE4_2 AVX FP16 AVX2
+--       SSE4_1 (2 files):          + SSSE3 SSE4_1
+--       SSE4_2 (1 files):          + SSSE3 SSE4_1 POPCNT SSE4_2
+--       FP16 (1 files):            + SSSE3 SSE4_1 POPCNT SSE4_2 FP16 AVX
+--       AVX (3 files):             + SSSE3 SSE4_1 POPCNT SSE4_2 AVX
+--       AVX2 (6 files):            + SSSE3 SSE4_1 POPCNT SSE4_2 FP16 FMA3 AVX AVX2
+-- 
+--   C/C++:
+--     Built as dynamic libs?:      NO
+--     C++11:                       YES
+--     C++ Compiler:                /home/v/.conan/data/toolchain-wrapper/ue4/adamrehn/4.27/package/e64d7b5d1a4c7e2d7d0cbef6040191de1280331d/wrappers/clang++.py  (ver 11.0.1)
+--     C++ flags (Release):         -fPIC   -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wsign-promo -Wuninitialized -Winit-self -Wno-narrowing -Wno-delete-non-virtual-dtor -Wno-unnamed-type-template-args -Wno-comment -fdiagnostics-show-option -Wno-long-long -pthread -Qunused-arguments -fomit-frame-pointer -ffunction-sections  -msse -msse2 -msse3 -fvisibility=hidden -fvisibility-inlines-hidden -O3 -DNDEBUG  -DNDEBUG
+--     C++ flags (Debug):           -fPIC   -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wsign-promo -Wuninitialized -Winit-self -Wno-narrowing -Wno-delete-non-virtual-dtor -Wno-unnamed-type-template-args -Wno-comment -fdiagnostics-show-option -Wno-long-long -pthread -Qunused-arguments -fomit-frame-pointer -ffunction-sections  -msse -msse2 -msse3 -fvisibility=hidden -fvisibility-inlines-hidden -g  -O0 -DDEBUG -D_DEBUG
+--     C Compiler:                  /home/v/.conan/data/toolchain-wrapper/ue4/adamrehn/4.27/package/e64d7b5d1a4c7e2d7d0cbef6040191de1280331d/wrappers/clang.py
+--     C flags (Release):           -fPIC   -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wsign-promo -Wuninitialized -Winit-self -Wno-narrowing -Wno-delete-non-virtual-dtor -Wno-unnamed-type-template-args -Wno-comment -fdiagnostics-show-option -Wno-long-long -pthread -Qunused-arguments -fomit-frame-pointer -ffunction-sections  -msse -msse2 -msse3 -fvisibility=hidden -fvisibility-inlines-hidden -O3 -DNDEBUG  -DNDEBUG
+--     C flags (Debug):             -fPIC   -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wsign-promo -Wuninitialized -Winit-self -Wno-narrowing -Wno-delete-non-virtual-dtor -Wno-unnamed-type-template-args -Wno-comment -fdiagnostics-show-option -Wno-long-long -pthread -Qunused-arguments -fomit-frame-pointer -ffunction-sections  -msse -msse2 -msse3 -fvisibility=hidden -fvisibility-inlines-hidden -g  -O0 -DDEBUG -D_DEBUG
+--     Linker flags (Release):      ---link
+--     Linker flags (Debug):        ---link
+--     ccache:                      NO
+--     Precompiled headers:         NO
+--     Extra dependencies:          gtk-x11-2.0 gdk-x11-2.0 pangocairo-1.0 atk-1.0 cairo gdk_pixbuf-2.0 gio-2.0 pangoft2-1.0 pango-1.0 gobject-2.0 glib-2.0 harfbuzz fontconfig freetype gthread-2.0 /home/v/.conan/data/libjpeg/9d/_/_/package/d988447fa516eac7400b2f34e2d4b89e42b4b1a8/lib/libjpeg.a /home/v/.conan/data/UElibPNG/ue4/adamrehn/4.27/package/4a8aa5a92eca740ec3100060d2a1f829bb028521/lib/libpng.a /home/v/.conan/data/zlib/ue4/adamrehn/4.27/package/4a8aa5a92eca740ec3100060d2a1f829bb028521/lib/libz_fPIC.a stdc++ dl m pthread rt
+--     3rdparty dependencies:
+-- 
+--   OpenCV modules:
+--     To be built:                 core flann imgproc imgcodecs videoio highgui features2d calib3d
+--     Disabled:                    ml objdetect photo shape stitching superres video videostab world
+--     Disabled by dependency:      -
+--     Unavailable:                 cudaarithm cudabgsegm cudacodec cudafeatures2d cudafilters cudaimgproc cudalegacy cudaobjdetect cudaoptflow cudastereo cudawarping cudev java python2 python3 ts viz
+-- 
+--   GUI: 
+--     QT:                          NO
+--     GTK+ 2.x:                    YES (ver 2.24.32)
+--     GThread :                    YES (ver 2.64.6)
+--     GtkGlExt:                    NO
+--     OpenGL support:              NO
+--     VTK support:                 NO
+-- 
+--   Media I/O: 
+--     ZLib:                        /home/v/.conan/data/zlib/ue4/adamrehn/4.27/package/4a8aa5a92eca740ec3100060d2a1f829bb028521/lib/libz_fPIC.a (ver 1.2.8)
+--     JPEG:                        /home/v/.conan/data/libjpeg/9d/_/_/package/d988447fa516eac7400b2f34e2d4b89e42b4b1a8/lib/libjpeg.a (ver 90)
+--     WEBP:                        NO
+--     PNG:                         /home/v/.conan/data/UElibPNG/ue4/adamrehn/4.27/package/4a8aa5a92eca740ec3100060d2a1f829bb028521/lib/libpng.a (ver 1.5.2)
+--     TIFF:                        NO
+--     JPEG 2000:                   NO
+--     OpenEXR:                     NO
+--     GDAL:                        NO
+--     GDCM:                        NO
+-- 
+--   Video I/O:
+--     DC1394 1.x:                  NO
+--     DC1394 2.x:                  NO
+--     FFMPEG:                      NO
+--       avcodec:                   NO
+--       avformat:                  NO
+--       avutil:                    NO
+--       swscale:                   NO
+--       avresample:                NO
+--     GStreamer:                   NO
+--     OpenNI:                      NO
+--     OpenNI PrimeSensor Modules:  NO
+--     OpenNI2:                     NO
+--     PvAPI:                       NO
+--     GigEVisionSDK:               NO
+--     Aravis SDK:                  NO
+--     UniCap:                      NO
+--     UniCap ucil:                 NO
+--     V4L/V4L2:                    NO/YES
+--     XIMEA:                       NO
+--     Xine:                        NO
+--     Intel Media SDK:             NO
+--     gPhoto2:                     NO
+-- 
+--   Parallel framework:            pthreads
+-- 
+--   Trace:                         YES ()
+-- 
+--   Other third-party libraries:
+--     Use Intel IPP:               NO
+--     Use Intel IPP IW:            NO
+--     Use Intel IPP Async:         NO
+--     Use VA:                      NO
+--     Use Intel VA-API/OpenCL:     NO
+--     Use Lapack:                  NO
+--     Use Eigen:                   NO
+--     Use Cuda:                    NO
+--     Use OpenCL:                  NO
+--     Use OpenVX:                  NO
+--     Use custom HAL:              NO
+-- 
+--   Python 2:
+--     Interpreter:                 NO
+-- 
+--   Python 3:
+--     Interpreter:                 /usr/bin/python3 (ver 3.8.10)
+-- 
+--   Python (for build):            /usr/bin/python3
+-- 
+--   Java:
+--     ant:                         NO
+--     JNI:                         /home/v/android-studio/jre/include /home/v/android-studio/jre/include/linux /home/v/android-studio/jre/include
+--     Java wrappers:               NO
+--     Java tests:                  NO
+-- 
+--   Matlab:                        NO
+-- 
+--   Documentation:
+--     Doxygen:                     NO
+-- 
+--   Tests and samples:
+--     Tests:                       NO
+--     Performance tests:           NO
+--     C/C++ Examples:              NO
+-- 
+--   Install path:                  /home/v/.conan/data/opencv-ue4/3.3.0/adamrehn/4.27/package/fdd803c226828823a6ee327f247d851f89d4b708
+-- 
+--   cvconfig.h is in:              /home/v/.conan/data/opencv-ue4/3.3.0/adamrehn/4.27/build/fdd803c226828823a6ee327f247d851f89d4b708
+-- -----------------------------------------------------------------
+-- 
+-- Configuring incomplete, errors occurred!
+See also "/home/v/.conan/data/opencv-ue4/3.3.0/adamrehn/4.27/build/fdd803c226828823a6ee327f247d851f89d4b708/CMakeFiles/CMakeOutput.log".
+See also "/home/v/.conan/data/opencv-ue4/3.3.0/adamrehn/4.27/build/fdd803c226828823a6ee327f247d851f89d4b708/CMakeFiles/CMakeError.log".
+Warning: the libcxx package has been deprecated and will be removed in a future version of conan-ue4cli.
+opencv-ue4/3.3.0@adamrehn/4.27: 

@@ -79,3 +79,12 @@ Plugins/*/Intermediate/*
 
 # Cache files for the editor to use
 DerivedDataCache/*
+
+
+
+# Rider user specific files
+.idea/
+
+# Binaries
+Android_Multi/
+LinuxNoEditor/

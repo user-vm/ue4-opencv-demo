@@ -1,0 +1,100 @@
+{
+ "graph_lock": {
+  "nodes": {
+   "0": {
+    "options": "libjpeg:fPIC=True\nlibjpeg:shared=False",
+    "requires": [
+     "1"
+    ],
+    "build_requires": [
+     "9"
+    ],
+    "path": "conanfile.txt",
+    "context": "host"
+   },
+   "1": {
+    "ref": "opencv-ue4/3.3.0@adamrehn/4.27",
+    "options": "libjpeg:fPIC=True\nlibjpeg:shared=False",
+    "package_id": "0594febf016c5f9e35c75e5c8141132fab199bfe",
+    "prev": "0",
+    "requires": [
+     "2",
+     "3",
+     "4",
+     "6",
+     "7",
+     "8"
+    ],
+    "context": "host"
+   },
+   "2": {
+    "ref": "libcxx/ue4@adamrehn/profile",
+    "options": "",
+    "package_id": "5ab84d6acfe1f23c4fae0ab88f26e3a396351ac9",
+    "prev": "0",
+    "context": "host"
+   },
+   "3": {
+    "ref": "ue4util/ue4@adamrehn/profile",
+    "options": "",
+    "package_id": "5ab84d6acfe1f23c4fae0ab88f26e3a396351ac9",
+    "prev": "0",
+    "context": "host"
+   },
+   "4": {
+    "ref": "zlib/ue4@adamrehn/4.27",
+    "options": "",
+    "package_id": "4a8aa5a92eca740ec3100060d2a1f829bb028521",
+    "prev": "0",
+    "requires": [
+     "5"
+    ],
+    "context": "host"
+   },
+   "5": {
+    "ref": "ue4lib/ue4@adamrehn/profile",
+    "options": "",
+    "package_id": "5ab84d6acfe1f23c4fae0ab88f26e3a396351ac9",
+    "prev": "0",
+    "context": "host"
+   },
+   "6": {
+    "ref": "UElibPNG/ue4@adamrehn/4.27",
+    "options": "",
+    "package_id": "4a8aa5a92eca740ec3100060d2a1f829bb028521",
+    "prev": "0",
+    "requires": [
+     "5"
+    ],
+    "context": "host"
+   },
+   "7": {
+    "ref": "libjpeg/9d",
+    "options": "fPIC=True\nshared=False",
+    "package_id": "d988447fa516eac7400b2f34e2d4b89e42b4b1a8",
+    "prev": "0",
+    "context": "host"
+   },
+   "8": {
+    "ref": "UElibJPG/ue4@adamrehn/4.27",
+    "options": "",
+    "package_id": "4a8aa5a92eca740ec3100060d2a1f829bb028521",
+    "prev": "0",
+    "requires": [
+     "5"
+    ],
+    "context": "host"
+   },
+   "9": {
+    "ref": "toolchain-wrapper/ue4@adamrehn/4.27",
+    "options": "",
+    "package_id": "e64d7b5d1a4c7e2d7d0cbef6040191de1280331d",
+    "prev": "0",
+    "context": "host"
+   }
+  },
+  "revisions_enabled": false
+ },
+ "version": "0.4",
+ "profile_host": "[settings]\narch=x86_64\narch_build=x86_64\nbuild_type=Release\ncompiler=clang\ncompiler.libcxx=libc++\ncompiler.version=11\nos=Linux\nos_build=Linux\n[options]\n[build_requires]\n*: toolchain-wrapper/ue4@adamrehn/4.27\n[env]\nUNREAL_ENGINE_VERSION=4.27"
+}

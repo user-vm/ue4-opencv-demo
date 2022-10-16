@@ -1,0 +1,12 @@
+52,54c52,54
+< #if defined(check)
+< #  warning Detected Apple 'check' macro definition, it can cause build conflicts. Please, include this header before any Apple headers.
+< #endif
+---
+> //#if defined(check)
+> //#  warning Detected Apple 'check' macro definition, it can cause build conflicts. Please, include this header before any Apple headers.
+> //#endif
+901c901
+<     bool check() const;
+---
+>     //bool check() const;

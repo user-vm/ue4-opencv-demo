@@ -48,15 +48,30 @@ public class OpenCVDemo : ModuleRules
 		//Link against our engine dependencies
 		PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
 		PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore" });
-		
-		//Install third-party dependencies using conan
-		Process.Start(new ProcessStartInfo
+		PublicDependencyModuleNames.AddRange(new string[] { "RHI", "RenderCore", "Media", "MediaAssets" });
+
+		if (Target.Platform != UnrealTargetPlatform.Android) //this might not be necessary, depends on what happens if the build.py in package/ is built for Android
 		{
-			FileName = "conan",
-			Arguments = "install . --profile ue4",
-			WorkingDirectory = ModuleRoot
-		})
-		.WaitForExit();
+			//Install third-party dependencies using conan
+			Process.Start(new ProcessStartInfo
+				{
+					FileName = "conan",
+					Arguments = "install . --profile ue4",
+					WorkingDirectory = ModuleRoot
+				})
+				.WaitForExit();
+		}
+		else
+		{
+			//Install third-party dependencies using conan
+			Process.Start(new ProcessStartInfo
+				{
+					FileName = "conan",
+					Arguments = "install . --profile:build ue4 --profile:host ue4.27-Android-armv8-unknown-linux-gnu_3",
+					WorkingDirectory = ModuleRoot
+				})
+				.WaitForExit();
+		}
 		
 		//Link against our conan-installed dependencies
 		this.ProcessDependencies(Path.Combine(ModuleRoot, "conanbuildinfo.json"), Target);
