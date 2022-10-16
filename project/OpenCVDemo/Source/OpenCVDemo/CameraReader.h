@@ -2,6 +2,7 @@
 
 #pragma once
 
+//yes, it needs to be this way
 #define uint64 uint64_opencv
 #define int64 int64_opencv
 #include "opencv2/core/mat.hpp"
@@ -19,26 +20,7 @@
 #include "Runtime/Engine/Classes/Engine/TextureRenderTarget2D.h"
 #include "Components/SceneCaptureComponent2D.h"
 #include "GameFramework/Actor.h"
-//#include "Private/Internationalization/ICURegex.h"
 #include "CameraReader.generated.h"
-/*
-UCLASS()
-class UDetectedArucoMarker : public UObject
-{
-	GENERATED_BODY()
-public:
-	int id;
-	FTransform pose;
-};*/
-/*
-UCLASS()
-class UArucoIDActorCorrespondence : public UObject
-{
-	GENERATED_BODY()
-public:
-	int ID;
-	AActor ActorToPlace;
-};*/
 
 UCLASS()
 class OPENCVDEMO_API ACameraReader : public AActor
@@ -105,8 +87,6 @@ public:
 		UMaterialInstanceDynamic* Camera_MatRaw;
 	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category=Camera)
 		UMaterialInstanceDynamic* Camera_MatPost;
-	//UPROPERTY(BlueprintReadWrite, EditAnywhere, Category=Camera)
-	//	TArray<UArucoIDActorCorrespondence> ArucoIDActorCorrespondences; //might want to make this a TMap or a UHashTable
 	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category=Camera)
 		TMap<int,AActor*> ArucoIDActorMap;
 
@@ -117,14 +97,6 @@ public:
 		TArray<FTransform> Aruco_DetectedMarkerPoses;
 	UPROPERTY(BlueprintReadOnly, VisibleAnywhere, Category=Camera)
 		TArray<int> Aruco_DetectedMarkerIds;
-	/*
-	//this was meant to only spawn objects if they did not exist on the previous frame
-	//but what makes more sense is to assign some of the ids to UE actors in the blueprint, and spawn them when the marker is first seen (on isValid), turn off their rendering when their marker is no longer detected, and turn it back on when the marker is seen again
-	UPROPERTY(BlueprintReadOnly, VisibleAnywhere, Category=Camera)
-		TArray<UDetectedArucoMarker> Aruco_NewMarkers;
-	UPROPERTY(BlueprintReadOnly, VisibleAnywhere, Category=Camera)
-		TArray<UDetectedArucoMarker> Aruco_OldMarkers;
-	*/
 
 	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category=Camera)
 		TArray<float> Camera_Matrix; //nested TArrays don't work, so we use a 9-element TArray
@@ -140,11 +112,6 @@ public:
 		bool ReadFrame();
 	UFUNCTION(BlueprintCallable, Category=Data)
 		void WriteMarkers(FString outputFolderPath);
-	//UFUNCTION(BlueprintCallable, Category=Data)
-	//	bool SetCameraLocation();
-
-	//non-blueprint UE variables
-	//TArray<UDetectedArucoMarker>& Aruco_TempMarkers; //helper variable to swap Aruco_NewMarkers and Aruco_OldMarkers
 
 	//OpenCV
 	cv::Size cvSize;
