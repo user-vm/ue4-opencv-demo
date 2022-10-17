@@ -1,4 +1,10 @@
+**Under construction, probably will not work out of the box for anyone else.**
+
+![](demo.gif)
+
 This is a modified version of [ue4-opencv-demo](https://github.com/adamrehn/ue4-opencv-demo), implementing ArUco marker tracking in Unreal Engine with OpenCV. It uses OpenCV's VideoCapture, because Unreal Engine webcam capture through IMediaCaptureSupport has not been implemented yet.
+
+Markers tracked are ```marker_000.png```, ```marker_001.png``` and ```marker_002.png```, in ```python_camera_calibration/aruco_markers```.
 
 Tested only on Ubuntu. Running on Windows would require changing the VideoCapture API from CAP\_V4L2 to CAP\_DSHOW in CameraReader.cpp (or something else, depending on the API needed - see [here](https://docs.opencv.org/3.4/d4/d15/group__videoio__flags__base.html)). Also, the build flag "-DWITH\_DSHOW=OFF" should be changed to "-DWITH\_DSHOW=ON" for this purpose. Alternatively, Windows webcam capture can be done through Unreal Engine, with some modifications to the CameraReader blueprint (as can be seen [here](https://www.youtube.com/watch?v=YOidIl2kTD0&list=PLUH2VVdSrWDAanjmSOumd5xXVq_jUeAGI)).
 
