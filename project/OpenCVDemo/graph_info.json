@@ -1,14 +1,5 @@
 {
- "options": [
-  [
-   "libjpeg:fPIC",
-   "True"
-  ],
-  [
-   "libjpeg:shared",
-   "False"
-  ]
- ],
+ "options": [],
  "root": {
   "name": null,
   "version": null,

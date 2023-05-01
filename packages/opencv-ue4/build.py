@@ -3,7 +3,7 @@ import argparse, subprocess, sys
 
 # Parse our command-line arguments
 parser = argparse.ArgumentParser()
-parser.add_argument("--upload", default=None, help="Upload built package to the specified remote")
+parser.add_argument("--upload", default=None, help="Upload built package to the specified remote (I never use this)")
 parser.add_argument("--android", action="store_true", help="Use to do an Android build")
 parser.add_argument("--android_conan_profile_host", default="ue4.27-Android-armv8-unknown-linux-gnu_3",
                     help="Name of host profile to use for Android (only used if --android argument is given). This profile refers to the build target (so Android). Corresponds to the --profile:host conan argument.")
@@ -11,11 +11,12 @@ parser.add_argument("--android_conan_profile_build", default="ue4.27-Linux-x86_6
                     help="Name of build profile to use for Android (only used if --android argument is given). This profile refers to the OS/machine you are building on (Linux/Windows/MacOS). Corresponds to the --profile:build conan argument.")
 args = parser.parse_args()
 
-# Query ue4cli for the UE4 version string
+# Query ue4cli for the Unreal version string
+# Note that ue4cli can also use Unreal 5, with the ue4 command using UE5 too
 proc = subprocess.Popen(["ue4", "version", "short"], stdout=subprocess.PIPE, stderr=subprocess.PIPE, universal_newlines=True)
 (stdout, stderr) = proc.communicate(input)
 if proc.returncode != 0:
-    raise Exception("failed to retrieve UE4 version string")
+    raise Exception("failed to retrieve Unreal version string")
 
 # Build the Conan package, using the Engine version as the channel name
 channel = stdout.strip()

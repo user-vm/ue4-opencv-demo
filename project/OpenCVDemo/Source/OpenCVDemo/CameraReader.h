@@ -9,9 +9,10 @@
 //#include "opencv2/core.hpp"
 #include "opencv2/videoio.hpp" //remove "-DBUILD_opencv_videoio=OFF" from conanfile.py if this header cannot be found
 //#include "opencv2/core.hpp"
-#include "opencv2/highgui.hpp"
+//#include "opencv2/highgui.hpp"
 #include "opencv2/imgproc.hpp"
 #include "opencv2/aruco.hpp"
+#include "opencv2/imgcodecs.hpp"
 #include "opencv2/calib3d.hpp"
 #undef uint64
 #undef int64
@@ -110,13 +111,14 @@ public:
 		void OnNextVideoFrame();
 	UFUNCTION(BlueprintCallable, Category=Data)
 		bool ReadFrame();
-	UFUNCTION(BlueprintCallable, Category=Data)
-		void WriteMarkers(FString outputFolderPath);
+	//UFUNCTION(BlueprintCallable, Category=Data)
+	//	void WriteMarkers(FString outputFolderPath);
 
 	//OpenCV
 	cv::Size cvSize;
 	cv::Mat cvMat;
 	cv::Mat cvMat1;
+	cv::Mat cvMat2;
 	cv::VideoCapture cap;
 	cv::Ptr<cv::aruco::Dictionary> arucoDictionary;
 	cv::Mat cameraMatrix;
@@ -124,6 +126,7 @@ public:
 	std::vector<int> arucoIds;
 	std::vector<cv::Vec3d> arucoRvecs;
 	std::vector<cv::Vec3d> arucoTvecs;
+	FDateTime beginPlayTime;
 
 	/**
 	 * @brief Aruco marker detection

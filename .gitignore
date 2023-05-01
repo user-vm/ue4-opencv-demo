@@ -76,3 +76,6 @@ DerivedDataCache/*
 
 # Rider user specific files
 .idea/
+
+#Custom
+exclude/

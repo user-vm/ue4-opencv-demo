@@ -3,7 +3,7 @@ using UnrealBuildTool;
 using System.Diagnostics;
 
 //For Tools.DotNETCommon.JsonObject and Tools.DotNETCommon.FileReference
-using Tools.DotNETCommon;
+using EpicGames.Core;
 
 public class OpenCVDemo : ModuleRules
 {
@@ -12,7 +12,7 @@ public class OpenCVDemo : ModuleRules
 	}
 	
 	private bool IsWindows(ReadOnlyTargetRules target) {
-		return (target.Platform == UnrealTargetPlatform.Win32 || Target.Platform == UnrealTargetPlatform.Win64);
+		return target.Platform == UnrealTargetPlatform.Win64; //no win32 support in Unreal 5, checking target.Platform == UnrealTargetPlatform.Win32 gives an error
 	}
 	
 	private void ProcessDependencies(string depsJson, ReadOnlyTargetRules target)
@@ -28,7 +28,7 @@ public class OpenCVDemo : ModuleRules
 		{
 			//Add the header and library paths for the dependency package
 			PublicIncludePaths.AddRange(dep.GetStringArrayField("include_paths"));
-			PublicLibraryPaths.AddRange(dep.GetStringArrayField("lib_paths"));
+			PublicSystemLibraryPaths.AddRange(dep.GetStringArrayField("lib_paths"));
 			
 			//Add the preprocessor definitions from the dependency package
 			PublicDefinitions.AddRange(dep.GetStringArrayField("defines"));

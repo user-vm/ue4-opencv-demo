@@ -19,8 +19,8 @@ class OpenCVUE4Conan(ConanFile):
             #needed if building for Linux, not Android
             self.requires("zlib/ue4@adamrehn/{}".format(self.channel))
             self.requires("UElibPNG/ue4@adamrehn/{}".format(self.channel))
-            self.requires("libjpeg/9d")
-            self.requires("UElibJPG/ue4@adamrehn/{}".format(self.channel))
+            #self.requires("libjpeg/9d")
+            self.requires("LibJpegTurbo/ue4@adamrehn/{}".format(self.channel))
 
             #not used because of weird license, using v4l2 to set webcam settings instead
             ##self.requires("gstreamer/1.19.2")
@@ -49,7 +49,9 @@ class OpenCVUE4Conan(ConanFile):
             "-DWITH_OPENNI2=OFF", "-DWITH_OPENVX=OFF", "-DWITH_PVAPI=OFF", "-DWITH_QT=OFF",
             "-DWITH_TBB=OFF", "-DWITH_TIFF=OFF", "-DWITH_VFW=OFF", "-DWITH_VTK=OFF",
             "-DWITH_WEBP=OFF", "-DWITH_WIN32UI=OFF", "-DWITH_XIMEA=OFF", "-DWITH_ITT=OFF",
-            "-DBUILD_WITH_STATIC_CRT=OFF", "-DWITH_CAROTENE=OFF", #carotene fails on Android builds. On other platforms, OpenCV turns it off regardless.
+            "-DBUILD_WITH_STATIC_CRT=OFF", "-DWITH_CAROTENE=OFF", "-DWITH_V4L=ON", "-DOPENCV_GENERATE_PKGCONFIG=ON", #carotene fails on Android builds. On other platforms, OpenCV turns it off regardless.
+                                                                                   
+            "-DWITH_GPHOTO=OFF", "-DWITH_1394=OFF", "-DWITH_GPHOTO2=OFF",
             
             # Just build a few core modules
             "-DBUILD_opencv_apps=OFF", "-DBUILD_opencv_calib3d=ON", "-DBUILD_opencv_core=ON",
@@ -58,7 +60,7 @@ class OpenCVUE4Conan(ConanFile):
             "-DBUILD_opencv_cudalegacy=OFF", "-DBUILD_opencv_cudaobjdetect=OFF", "-DBUILD_opencv_cudaoptflow=OFF",
             "-DBUILD_opencv_cudastereo=OFF", "-DBUILD_opencv_cudawarping=OFF", "-DBUILD_opencv_cudev=OFF",
             "-DBUILD_opencv_dnn=OFF", "-DBUILD_opencv_features2d=ON", "-DBUILD_opencv_flann=ON",
-            "-DBUILD_opencv_highgui=ON", "-DBUILD_opencv_imgcodecs=ON", "-DBUILD_opencv_imgproc=ON",
+            "-DBUILD_opencv_highgui=OFF", "-DBUILD_opencv_imgcodecs=ON", "-DBUILD_opencv_imgproc=ON",
             "-DBUILD_opencv_ml=OFF", "-DBUILD_opencv_objdetect=OFF", "-DBUILD_opencv_photo=OFF",
             "-DBUILD_opencv_shape=ON", "-DBUILD_opencv_stitching=OFF", "-DBUILD_opencv_superres=OFF",
             "-DBUILD_opencv_ts=OFF", "-DBUILD_opencv_video=OFF", "-DBUILD_opencv_videoio=ON",
@@ -135,7 +137,8 @@ class OpenCVUE4Conan(ConanFile):
         if self.settings.os.value != "Android":
             zlib = self.deps_cpp_info["zlib"]
             libpng = self.deps_cpp_info["UElibPNG"]
-            libjpg = self.deps_cpp_info["libjpeg"]
+            #libjpg = self.deps_cpp_info["libjpeg"]
+            libjpg = self.deps_cpp_info["LibJpegTurbo"]
             #gstreamer = self.deps_cpp_info["gstreamer"]
 
             flags.extend([

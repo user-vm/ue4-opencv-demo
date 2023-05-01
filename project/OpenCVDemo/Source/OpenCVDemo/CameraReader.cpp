@@ -134,19 +134,65 @@ bool ACameraReader::ReadFrame()
 {
 	FDateTime StartTime = FDateTime::UtcNow();
 	float TimeElapsedInMs;
-	//UE_LOG(LogTemp, Warning, TEXT("ReadFrame() called"));
+	UE_LOG(LogTemp, Warning, TEXT("ReadFrame() called"));
 	if (!Camera_Texture2D || !Camera_RenderTarget)
 		return false;
 	
 	//UseOpenCVWebcamReading should be set to true
 	if (UseOpenCVWebcamReading)
 	{
+		
+		UE_LOG(LogTemp, Warning, TEXT("MARK1"));
 		if (cap.isOpened())
 		{
 			//the following can be helpful for checking that the camera framerate is correct. The webcam may default to a low-framerate mode.
 			/*TimeElapsedInMs = (FDateTime::UtcNow() - StartTime).GetTotalMilliseconds();
 			UE_LOG(LogTemp, Warning, TEXT("ACameraReader::ReadFrame() TimeElapsedInMs = %f before cap.read"), TimeElapsedInMs);*/
 			const int capReadResult = cap.read(cvMat1);
+			std::string pixelText = "Before decode: ";
+			cv::Vec3b pixelU;
+			if (OutputDebugImages && !cvMat1.empty() && (FDateTime::UtcNow() - beginPlayTime).GetSeconds() > 3)
+			{
+				bool imwriteResult = cv::imwrite("/home/v/output.png", cvMat1);
+				UE_LOG(LogTemp, Warning, TEXT("imwriteResult = %d"), imwriteResult);
+				for (int i=0;i<1080;i++)
+				{
+					for (int j=0;j<1920;j++)
+					{
+						pixelU = cvMat1.at<cv::Vec3b>(i,j);
+						pixelText += std::to_string(pixelU.val[0]) + " " + std::to_string(pixelU.val[1]) + " " + std::to_string(pixelU.val[2]) + "  ";
+					}
+				}
+				FString pixelFString = FString(pixelText.c_str());
+				UE_LOG(LogTemp, Warning, TEXT("%s"), *pixelFString);
+
+				pixelText = "After decode: ";
+				/*cvMat2 = cv::imdecode(cvMat1, cv::IMREAD_COLOR);
+				
+				cv::Scalar_<uint8_t> pixel;
+				for (int i=0;i<1080;i++)
+				{
+					for (int j=0;j<1920;j++)
+					{
+						pixel = cvMat2.at<cv::Scalar_<uint8_t>>(i,j);
+						pixelText += std::to_string(pixel.val[0]) + " " + std::to_string(pixel.val[1]) + " " + std::to_string(pixel.val[2]) + " " + std::to_string(pixel.val[3]) + "  ";
+					}
+				}
+				pixelFString = FString(pixelText.c_str());
+				UE_LOG(LogTemp, Warning, TEXT("%s"), *pixelFString);*/
+				OutputDebugImages = false;
+			}
+			
+			//if (cvMat1.empty())
+			//{
+				//cvMat1 = cv::imdecode(cvMat2, cv::IMREAD_COLOR);
+			//}
+			//else
+			//{
+			//	cv::imdecode(cvMat2, cv::IMREAD_COLOR, &cvMat1); //should change so that the matrix is not allocated every time, using Mat cv::imdecode 	( 	InputArray  	buf, int  	flags, Mat *  	dst )
+			//}
+			const cv::Scalar result = cv::mean(cvMat1);
+			UE_LOG(LogTemp, Warning, TEXT("capReadResult %d ; mean = %f %f %f %f"), capReadResult, result.val[0], result.val[1], result.val[2], result.val[3]);
 			DetectMarkers(cvMat1, cameraMatrix, distCoeffs, arucoIds, arucoRvecs, arucoTvecs, drawArucoAxes);
 			Aruco_DetectedMarkerIds.SetNum(arucoTvecs.size());
 			Aruco_DetectedMarkerPoses.SetNum(arucoTvecs.size());
@@ -187,10 +233,26 @@ bool ACameraReader::ReadFrame()
 	TimeElapsedInMs = (FDateTime::UtcNow() - StartTime).GetTotalMilliseconds();
 	UE_LOG(LogTemp, Warning, TEXT("ACameraReader::ReadFrame() TimeElapsedInMs = %f mid"), TimeElapsedInMs);
 	//highgui.hpp seems to be missing
-	if (OutputDebugImages && !cvMat.empty())
+	/*
+	if (OutputDebugImages && !cvMat.empty() && (FDateTime::UtcNow() - beginPlayTime).GetSeconds() > 3)
 	{
-		cv::imwrite("/home/v/output.png", cvMat);
-	}
+		//print out all pixel values
+		//probably wait to do this and only do it once, or else everything will be extremely slow
+		std::string pixelText = "";
+		cv::Scalar_<uint8_t> pixel;
+		for (int i=0;i<108;i++)
+		{
+			for (int j=0;j<192;j++)
+			{
+				pixel = cvMat.at<cv::Scalar_<uint8_t>>(i*10,j*10);
+				pixelText += std::to_string(pixel.val[0]) + " " + std::to_string(pixel.val[1]) + " " + std::to_string(pixel.val[2]) + " " + std::to_string(pixel.val[3]);
+			}
+		}
+		FString pixelFString = FString(pixelText.c_str());
+		UE_LOG(LogTemp, Warning, TEXT("%s"), *pixelFString);
+		OutputDebugImages = false;
+		//cv::imwrite("/home/v/output.png", cvMat); //I can't get OpenCV to build properly for UE5 if highgui is included
+	}*/
 
 	//Lock the texture so we can read/write to it
 	void* TextureData = Camera_Texture2D->PlatformData->Mips[0].BulkData.Lock(LOCK_READ_WRITE);
@@ -209,6 +271,7 @@ bool ACameraReader::ReadFrame()
 	TimeElapsedInMs = (FDateTime::UtcNow() - StartTime).GetTotalMilliseconds();
 	UE_LOG(LogTemp, Warning, TEXT("ACameraReader::ReadFrame() TimeElapsedInMs = %f end"), TimeElapsedInMs);
 	UE_LOG(LogTemp, Warning, TEXT("Aruco_DetectedMarkerPoses.Num() = %d"), Aruco_DetectedMarkerPoses.Num());
+	UE_LOG(LogTemp, Warning, TEXT("MARK"));
 	return true;
 }
 
@@ -216,9 +279,15 @@ bool ACameraReader::ReadFrame()
 void ACameraReader::BeginPlay()
 {
 	Super::BeginPlay();
+	beginPlayTime = FDateTime::UtcNow();
+	OutputDebugImages = true;
 	
 	if (UseOpenCVWebcamReading)
 	{
+		std::string cvInfo = cv::getBuildInformation();
+		FString cvInfoFString = FString(cvInfo.c_str());
+		UE_LOG(LogTemp, Warning, TEXT("%s"), *cvInfoFString);
+		
 		//extract camera matrix and distortion coefficients
 		Camera_Matrix.SetNum(9);
 		cameraMatrix = (cv::Mat1d(3, 3) << Camera_Matrix[0], Camera_Matrix[1], Camera_Matrix[2], Camera_Matrix[3], Camera_Matrix[4], Camera_Matrix[5], Camera_Matrix[6], Camera_Matrix[7], Camera_Matrix[8]);
@@ -234,11 +303,41 @@ void ACameraReader::BeginPlay()
 		}
 
 #ifdef PLATFORM_LINUX
-		if(cap.open(CameraID, cv::CAP_V4L2))
+		/*
+		int mjpg = cv::VideoWriter::fourcc('M', 'J', 'P', 'G'); //->this gave the correct fourcc code
+		UE_LOG(LogTemp, Warning, TEXT("UseOpenCVWebcamReading true"));
+		const int v4l2Changed = cap.set(cv::CAP_OPENCV_MJPEG, 1);
+		UE_LOG(LogTemp, Warning, TEXT("fpsChanged %d"), v4l2Changed);
+		const int fourccChanged = cap.set(cv::CAP_PROP_FOURCC, mjpg);//0x47504A4D); //MJPG
+		UE_LOG(LogTemp, Warning, TEXT("mjpg %d"), mjpg);
+		UE_LOG(LogTemp, Warning, TEXT("fourccChanged %d"), fourccChanged);
+		UE_LOG(LogTemp, Warning, TEXT("new cv::CAP_PROP_FOURCC %f"), cap.get(cv::CAP_PROP_FOURCC)); //matches the value of mjpg
+		const int fpsChanged = cap.set(cv::CAP_PROP_FPS, 30);
+		UE_LOG(LogTemp, Warning, TEXT("fpsChanged %d"), fpsChanged);
+		const int cappropautoexposureChanged = cap.set(cv::CAP_PROP_AUTO_EXPOSURE, 0.25);
+		UE_LOG(LogTemp, Warning, TEXT("cappropautoexposureChanged %d"), cappropautoexposureChanged);
+		//if(cap.open(CameraID, cv::CAP_OPENCV_MJPEG))
+		*/
+		if(cap.open("/dev/video0", cv::CAP_V4L2))
 #endif
 		{
+			cap.set(cv::CAP_PROP_FOURCC, cv::VideoWriter::fourcc('M', 'J', 'P', 'G'));
+			cap.set(cv::CAP_PROP_FRAME_WIDTH, 1920);
+			cap.set(cv::CAP_PROP_FRAME_HEIGHT, 1080);
+			/*int mjpg = cv::VideoWriter::fourcc('M', 'J', 'P', 'G'); //->this gave the correct fourcc code
+			UE_LOG(LogTemp, Warning, TEXT("UseOpenCVWebcamReading true"));
+			const int v4l2Changed = cap.set(cv::CAP_OPENCV_MJPEG, 1);
+			UE_LOG(LogTemp, Warning, TEXT("fpsChanged %d"), v4l2Changed);
+			const int fourccChanged = cap.set(cv::CAP_PROP_FOURCC, mjpg);//0x47504A4D); //MJPG
+			UE_LOG(LogTemp, Warning, TEXT("mjpg %d"), mjpg);
+			UE_LOG(LogTemp, Warning, TEXT("fourccChanged %d"), fourccChanged);
+			UE_LOG(LogTemp, Warning, TEXT("new cv::CAP_PROP_FOURCC %f"), cap.get(cv::CAP_PROP_FOURCC)); //matches the value of mjpg
+			const int fpsChanged = cap.set(cv::CAP_PROP_FPS, 30);
+			UE_LOG(LogTemp, Warning, TEXT("fpsChanged %d"), fpsChanged);
+			const int cappropautoexposureChanged = cap.set(cv::CAP_PROP_AUTO_EXPOSURE, 0.25);
+			UE_LOG(LogTemp, Warning, TEXT("cappropautoexposureChanged %d"), cappropautoexposureChanged);
 			cap.set(cv::CAP_PROP_FRAME_WIDTH, VideoSize.X);
-			cap.set(cv::CAP_PROP_FRAME_HEIGHT, VideoSize.Y);
+			cap.set(cv::CAP_PROP_FRAME_HEIGHT, VideoSize.Y);*/
 			VideoSize.X = cap.get(cv::CAP_PROP_FRAME_WIDTH);
 			VideoSize.Y = cap.get(cv::CAP_PROP_FRAME_HEIGHT);
 			UE_LOG(LogTemp, Warning, TEXT("Opened camera with CameraID %d and set frame size to (%d, %d)"), CameraID, int(VideoSize.X), int(VideoSize.Y));
